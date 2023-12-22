@@ -57,4 +57,5 @@ TiC Foundation is a non-profit website aimed at providing underprivileged young 
     ```bash
   cd codebase
   npm start
+  
 
