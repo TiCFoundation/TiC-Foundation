@@ -32,23 +32,29 @@ TiC Foundation is a non-profit website aimed at providing underprivileged young 
    ```bash
    git clone https://github.com/your-username/TiC-Foundation.git
 
-2. npm start
-    Starts the development server.
+   
+2.  Starts the development server.
+    ```bash
+    npm start    
 
-3. npm run build
-    Bundles the app into static files for production.
+3. Bundles the app into static files for production.
+    ```bash
+    npm run build 
 
-4. npm test
-    Starts the test runner.
-5. To create a production build, use 
+4. Starts the test runner.
+    ```bash
+    npm test
+5. To create a production build
+    ```bash
     npm run build.
 
-6. npm run eject
-    Removes this tool and copies build dependencies, configuration files
+6. Removes this tool and copies build dependencies, configuration files
     and scripts into the app directory. If you do this, you can’t go back!
+    ```bash
+    npm run eject
 
 7. To run the app:
-
+    ```bash
   cd codebase
   npm start
 
