@@ -55,7 +55,8 @@ TiC Foundation is a non-profit website aimed at providing underprivileged young 
 
 7. To run the app:
     ```bash
-  cd codebase
-  npm start
-  
+    cd codebase
+    ```
+    npm start
+
 
