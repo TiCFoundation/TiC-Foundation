@@ -30,4 +30,25 @@ TiC Foundation is a non-profit website aimed at providing underprivileged young 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/empowertech-ghana.git
+   git clone https://github.com/your-username/TiC-Foundation.git
+
+2. npm start
+    Starts the development server.
+
+3. npm run build
+    Bundles the app into static files for production.
+
+4. npm test
+    Starts the test runner.
+5. To create a production build, use 
+    npm run build.
+
+6. npm run eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+
+7. To run the app:
+
+  cd codebase
+  npm start
+
