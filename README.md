@@ -56,7 +56,8 @@ TiC Foundation is a non-profit website aimed at providing underprivileged young 
 7. To run the app:
     ```bash
     cd codebase
-    ```
+8. To start develop server and see results in a web browser
+    ```bash
     npm start
 
 
