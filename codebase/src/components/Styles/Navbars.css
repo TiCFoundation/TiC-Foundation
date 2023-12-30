@@ -1,0 +1,8 @@
+.logo {
+
+    transition: filter 0.3s ease-out, background-color 0.3s ease-out;
+}
+/* Hover effect - change color on hover */
+.logo:hover {
+    filter: hue-rotate(90deg); /* Change the hue to rotate colors (adjust the value as needed) */
+}

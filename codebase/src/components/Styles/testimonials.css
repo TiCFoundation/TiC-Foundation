@@ -1,0 +1,32 @@
+/* testimonials.css */
+
+.testimonials {
+    padding: 20px;
+  }
+  
+  .testimonials h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .testimonial-item {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .testimonial-item img {
+    border-radius: 50%;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .testimonial-item p {
+    margin-bottom: 10px;
+  }
+  
+  .testimonial-item cite {
+    font-style: italic;
+  }
+  
+  /* Add additional styles as needed */
+  
