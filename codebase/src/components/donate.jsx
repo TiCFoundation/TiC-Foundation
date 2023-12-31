@@ -25,10 +25,18 @@ function Donate() {
         <Row>
           {/* Text and Image Column */}
           <Col md={6}>
-            <h2>Our Impact</h2>
+            <h2>Join Us in Making a Difference</h2>
             <p>
-              Your generous donation helps us continue our mission and support the community. Thank you for your contribution!
+            Our story is one of resilience, determination, and the unwavering belief that 
+            education has the power to transform lives. We invite you to be a part of our journey. 
+            Your support will enable the <strong>TiC Foundation</strong> to expand its reach, bring computers to 
+            more classrooms, and empower countless children with the tools they need to shape their futures.
+            Together, let's build a world where every child has the opportunity to unlock their potential through technology. 
+            Join us in making a difference, one computer at a time.
+              Your generous donation helps us continue our mission and support the community. 
+              Thank you for your contribution!
             </p>
+            <h5>Donate today and be a catalyst for change. Together, we are #TechInspiredChange.</h5>
             {/* Add your image here */}
             <img src="https://pbs.twimg.com/media/EwwHSE9XIAAur16.jpg" alt="Our Impact" className="img-fluid" />
           </Col>

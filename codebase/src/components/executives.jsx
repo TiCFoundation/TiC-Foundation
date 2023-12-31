@@ -38,7 +38,16 @@ function ExecutivePage() {
       workExperience: 'Company E, Company F',
       additionalDetails: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     // Add more executives as needed
-    }
+    },
+    {
+      id: 5,
+        name: 'Bright Awiakye',
+        imageSrc: 'https://pbs.twimg.com/media/EaE1tqpWkAIaKPf.jpg',
+        school: 'University 3',
+        workExperience: 'Company E, Company F',
+        additionalDetails: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      // Add more executives as needed
+      }
   ];
 
   return (

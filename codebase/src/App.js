@@ -16,8 +16,8 @@ function App() {
       <Navbars/>
       <Home />
       <AboutUs />
-      <ExecutivePage />
       <Commitment />
+      <ExecutivePage />
       <Testimonials />
       <Donate />
       <Sponsors/>

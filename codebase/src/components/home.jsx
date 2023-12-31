@@ -32,6 +32,14 @@ const Home = () => {
             <br />
             <h5>Your inspirational tagline here</h5>
           </div>
+          <div className='container'>
+          <div className='upper'>
+            <h5>We are here to inspire the young people for a technological change</h5>
+          </div>
+          <div className='lower'>
+            <p>Join us to make a Change through Technology</p>
+          </div>
+          </div>
         </div>
       ))}
     </div>

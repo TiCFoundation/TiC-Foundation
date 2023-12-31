@@ -10,7 +10,7 @@
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 80%;
+    height: 100%;
     position: absolute;
     opacity: 0;
     transition: opacity 5s ease-in-out;
@@ -45,3 +45,31 @@
     font-size: 1.2em;
     color: #fff; /* Adjust link color */
   }
+
+  /* YourComponent.css */
+
+/* .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+} */
+
+.upper {
+  background-color: #fff; /* Set your desired background color */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(181, 103, 103, 0.1); /* Set your desired box shadow */
+  
+  width: 40%;
+}
+
+.lower {
+  background-color: #fff; /* Set your desired background color */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(207, 105, 105, 0.1); 
+  /* margin-bottom: 60px; */
+  
+  width: 40%;
+}

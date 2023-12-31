@@ -15,6 +15,7 @@ function SignUp() {
           </p>
         </Col>
         {/* Column for the form */}
+       
         <Col md={6}>
           <h2>Sign Up</h2>
 
