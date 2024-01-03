@@ -20,6 +20,16 @@ const Home = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const currentDateTime = new Date();
+  const currentDate = currentDateTime.toLocaleDateString();
+  const currentTime = currentDateTime.toLocaleTimeString([], { hour: 'numeric', minute: 'numeric', hour12: true });
+
+  const handleDonateClick = () => {
+    const subject = encodeURIComponent('Computer Donation Inquiry');
+    const body = encodeURIComponent('I am interested in donating a computer. Please provide more information.');
+    window.location.href = `mailto:isaackwamenarteh21@gmail.com.com?subject=${subject}&body=${body}`;
+  };
+
   return (
     <div className="home" >
       {images.map((image, index) => (
@@ -31,14 +41,16 @@ const Home = () => {
             <h3>The TiC Foundation</h3>
             <br />
             <h5>Your inspirational tagline here</h5>
+            <h1>{currentDate}: {currentTime}</h1>
+            <button onClick={handleDonateClick} className="btn btn-primary">Donate a Computer</button>
           </div>
           <div className='container'>
-          <div className='upper'>
-            <h5>We are here to inspire the young people for a technological change</h5>
-          </div>
-          <div className='lower'>
-            <p>Join us to make a Change through Technology</p>
-          </div>
+            <div className='upper'>
+              <h5>We are here to inspire the young people for a technological change</h5>
+            </div>
+            <div className='lower'>
+              <p>Join us to make a Change through Technology</p>
+            </div>
           </div>
         </div>
       ))}
