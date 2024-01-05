@@ -26,8 +26,8 @@ const Home = () => {
 
   const handleDonateClick = () => {
     const subject = encodeURIComponent('Computer Donation Inquiry');
-    const body = encodeURIComponent('I am interested in donating a computer. Please provide more information.');
-    window.location.href = `mailto:isaackwamenarteh21@gmail.com.com?subject=${subject}&body=${body}`;
+    const body = encodeURIComponent('I am interested in donating a computer. Please provide more information below.');
+    window.location.href = `mailto:isaackwamenarteh21@gmail.com?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -37,13 +37,15 @@ const Home = () => {
           key={index}
           className={`background-image ${currentImageIndex === index ? 'show' : ''}`}
           style={{ backgroundImage: `url(${image})` }}>
+
           <div className="overlay">
             <h3>The TiC Foundation</h3>
             <br />
-            <h5>Your inspirational tagline here</h5>
-            <h1>{currentDate}: {currentTime}</h1>
+            <h5>Unlocking Tech Dreams For Teens</h5>
+            <h1 className='date'>{currentDate}  {currentTime}</h1>
             <button onClick={handleDonateClick} className="btn btn-primary">Donate a Computer</button>
           </div>
+
           <div className='container'>
             <div className='upper'>
               <h5>We are here to inspire the young people for a technological change</h5>
@@ -52,6 +54,7 @@ const Home = () => {
               <p>Join us to make a Change through Technology</p>
             </div>
           </div>
+          
         </div>
       ))}
     </div>

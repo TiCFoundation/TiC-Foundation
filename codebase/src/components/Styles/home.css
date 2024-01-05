@@ -5,7 +5,6 @@
     justify-content: center;
     position: relative;
   }
-  
   .background-image {
     background-size: cover;
     background-position: center;
@@ -13,63 +12,62 @@
     height: 100%;
     position: absolute;
     opacity: 0;
-    transition: opacity 5s ease-in-out;
+    transition: opacity 3s ease-in-out;
     border-radius: 2%;
     top: 0;
     left: 0;
-   
   }
   .background-image.show {
     opacity: 1;
   }
-  
-  .overlay {
-    margin-top: 10%;
-    text-align: center;
-    color: #fff;
+  .date{
+    color: white;
+    font-weight: bold;
+    text-shadow: 3px 3px #666;
+    margin-left: 85%;
+    margin-top: -100px;
+  }
+
+  .overlay button{
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 9px;
+    margin-left: 65%;
+    margin-top: 100px; 
   }
   
   .overlay h3 {
-    font-size: 2em;
-    color: green;
+    font-size: 4em;
+    color: white;
+    margin-left: 30%;
+    line-height: 3.2;
   }
   
   .overlay h5 {
     font-size: 1.5em;
-    color: aquamarine;
+    color: coral;
+    margin-left: 45%;
   }
-  
-  .overlay a {
+  .overlay a{
     display: block;
     margin-top: 20px;
     font-size: 1.2em;
     color: #fff; /* Adjust link color */
   }
-
-  /* YourComponent.css */
-
-/* .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-} */
-
 .upper {
-  background-color: #fff; /* Set your desired background color */
+  background-color: white; /* Set your desired background color */
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(181, 103, 103, 0.1); /* Set your desired box shadow */
-  
+  box-shadow: 0 4px 8px rgba(230, 225, 225, 0.1); /* Set your desired box shadow */
   width: 40%;
+  
 }
 
 .lower {
-  background-color: #fff; /* Set your desired background color */
+  background-color: white;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(207, 105, 105, 0.1); 
-  /* margin-bottom: 60px; */
-  
   width: 40%;
+  
 }

@@ -55,13 +55,19 @@ function AboutUs() {
         <Container>
           <Row>
             <Col md={6}>
-              <h2>Our Mission</h2>
-              <p>Join Us</p>
+              <h2>Our Mission Statement</h2>
+              <p>Our mission is to collaborate and provide essential computer skills to young people from low-income
+                families with resources and programs that will assist them to gain confidence in computing and 
+                support them to break into tech fields in institutions of higher learning.
+                </p>
               <img src="https://seattlemedium.com/wp-content/uploads/2020/12/distance-learning-748X486.jpg" alt="mission" />
             </Col>
             <Col md={6}>
-            <h2>Our Mission</h2>
-              <p>Learn About Us</p>
+            <h2>Our Vision Statement</h2>
+              <p> Our vision is to equip, motivate and empower underprivileged young people 
+                with computer compentencies by collaborating
+                with established educational institutions and organizations in Ghana and worldwide
+                </p>
               <img src="https://www.vmcdn.ca/f/files/bkreader/import/2020_03_Young-African-American-female-student-looking-at-a-laptop-computer-770x370-1.jpg;w=770" alt="vision" />
             </Col>
           </Row>
