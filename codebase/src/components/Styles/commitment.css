@@ -6,10 +6,6 @@
   padding: 20px;
 }
 
-.commitment h2 {
-  font-size: 2em;
-  color: #333;
-}
 
 .row {
   display: flex;
@@ -33,11 +29,13 @@
 .commitment-item h3 {
   font-size: 1.5em;
   color: #007bff;
+  text-align: center;
+  padding: 4%;
 }
 
 .commitment-item p {
   font-size: 1.2em;
-  color: #666;
+  color: #261f1f;
 }
 
 .commitment-item img {
@@ -45,4 +43,10 @@
   height: auto;
   border-radius: 8px;
   margin-top: 15px;
+}
+.commit{
+  text-align: center;
+  color:#ffcc4d;
+  padding: 4%;
+  
 }

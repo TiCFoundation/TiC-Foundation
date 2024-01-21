@@ -6,7 +6,7 @@ import './Styles/commitment.css';
 function Commitment() {
   return (
     <div className="commitment">
-      <h2>Our Commitments</h2>
+      <h2 className='commit'>Our Commitments</h2>
 
       <div className="row">
         <div className="col-md-4">

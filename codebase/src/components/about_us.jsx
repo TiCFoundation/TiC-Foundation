@@ -14,7 +14,7 @@ function AboutUs() {
               <h1>TiC Foundation: Empowering Through Technology</h1>
               <hr />
               <br />
-              <p>The TiC Foundation was born out of the belief that every child, 
+              <p className='technology'>The TiC Foundation was born out of the belief that every child, 
                 regardless of their background, deserves access to quality computer education. 
                 Our journey is a testament to the transformative power of education, and we are 
                 committed to breaking down barriers and bridging the digital gap for children in 
@@ -29,12 +29,16 @@ function AboutUs() {
       <section className="story-section">
         <Container>
           <Row>
-            <Col>
-              <h2>Our Founder's Story</h2>
+            <Col className="founder" md={6}>
+                <img src="./img/founder.jpg" className="founder" alt='founder'/>
+            </Col>
+
+            <Col md ={6}>
+              <h2 className='founderstory'>Our Founder's Story</h2>
               <br />
-              <h4>Bridging the Digital Divide: A Journey from Ghanaian Classrooms to Global Empowerment</h4>
+              <h4 className='bridge'> Early Experiences as Catalyst for Empowerment</h4>
               <hr />
-              <p>Growing up in the heart of Ghana, Isaac Narteh, embarked on a journey shaped by a profound 
+              <p className='story'>Growing up in the heart of Ghana, Isaac Narteh, embarked on a journey shaped by a profound 
                 lack of access to computer education in the schools he attended. The absence of computers in the 
                 classrooms meant that countless children, including himself, missed out on acquiring crucial 
                 digital skills that have become indispensable in today's rapidly evolving world.
@@ -55,20 +59,20 @@ function AboutUs() {
         <Container>
           <Row>
             <Col md={6}>
-              <h2>Our Mission Statement</h2>
-              <p>Our mission is to collaborate and provide essential computer skills to young people from low-income
+              <h2 className='ourMission'>Our Mission</h2>
+              <p className='mission'>Our mission is to collaborate and provide essential computer skills to young people from low-income
                 families with resources and programs that will assist them to gain confidence in computing and 
                 support them to break into tech fields in institutions of higher learning.
                 </p>
-              <img src="https://seattlemedium.com/wp-content/uploads/2020/12/distance-learning-748X486.jpg" alt="mission" />
+              <img src="https://seattlemedium.com/wp-content/uploads/2020/12/distance-learning-748X486.jpg" className="missionImage" alt="mission" />
             </Col>
             <Col md={6}>
-            <h2>Our Vision Statement</h2>
-              <p> Our vision is to equip, motivate and empower underprivileged young people 
+            <h2 className='ourVision'>Our Vision</h2>
+              <p className='vision'> Our vision is to equip, motivate and empower underprivileged young people 
                 with computer compentencies by collaborating
                 with established educational institutions and organizations in Ghana and worldwide
                 </p>
-              <img src="https://www.vmcdn.ca/f/files/bkreader/import/2020_03_Young-African-American-female-student-looking-at-a-laptop-computer-770x370-1.jpg;w=770" alt="vision" />
+              <img src="https://img.freepik.com/free-photo/portrait-black-child-while-doing-homework_641386-254.jpg?size=626&ext=jpg&ga=GA1.1.1412446893.1705104000&semt=ais"className='visionImage' alt="vision" />
             </Col>
           </Row>
         </Container>

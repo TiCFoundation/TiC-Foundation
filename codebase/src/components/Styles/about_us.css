@@ -19,3 +19,62 @@
   text-align: center;
   margin-top: 20px;
 }
+.founder img{
+  max-width: 350px;
+  display: inline-block;
+  vertical-align: top;
+  border: solid #ddd;
+  border-width: 1px;
+
+}
+.story{
+  padding: 3%;
+  text-align: justify;
+}
+.technology{
+  text-align: justify;
+  padding: 3%;
+  font-size: 18px;
+
+}
+.mission{
+  padding: 5%;  
+  text-align: justify;
+  font-size: 18px;
+}
+.vision{
+  padding: 8%;
+  text-align: justify;
+  font-size: 18px;
+}
+.ourMission{
+  color:#79bdfc;
+  text-align: center;
+
+}
+.ourVision{
+  color:#ffcc4d;
+  text-align: center;
+}
+.founderstory{
+  color: #79bdfc;
+  text-align: center;
+}
+.bridge{
+  text-align: center;
+  padding: 3%;
+}
+.visionImage{
+  width: 15%;
+  height: 10%;
+  display: inline-block;
+  margin: auto;
+  border-radius: 20px;
+}
+.missionImage{
+  width: 15%;
+  height: 10%;
+  display: inline-block;
+  margin: auto;
+  border-radius: 20px;
+}
