@@ -15,7 +15,7 @@
 }
 
 .nav-link{
-  color: #fff;
+  color: #489793;
   display: block;
   font-size: 0.7rem;
   text-decoration: none;
@@ -27,7 +27,7 @@
   margin: 20px 20px;
   padding: 20px 20px;
   text-decoration: none;
-  color: white;
+  color: rgb(82, 177, 161);
   transition: .5s;
   z-index: 1;
       &:before {
@@ -59,7 +59,7 @@
         z-index: -1;
       }
       &:hover {
-        color: #ffffff;
+        color: #306943;
         &:before {
           transform: scaleY(1);
           opacity: 1;
@@ -73,9 +73,9 @@
 
 .logo img{
  border-radius: 30px;
- animation: rotateLogo 5s linear infinite;
-  width: 65px;
-  height: 65px;
+ /* animation: rotateLogo 5s linear infinite; */
+  width: 67px;
+  height: 67px;
   border-radius: 100%;
   /* box-shadow: 10px 5px 10px rgba(40, 92, 92, 0.1); */
   will-change: filter;

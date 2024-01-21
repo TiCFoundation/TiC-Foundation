@@ -34,16 +34,16 @@ function AboutUs() {
               <br />
               <h4>Bridging the Digital Divide: A Journey from Ghanaian Classrooms to Global Empowerment</h4>
               <hr />
-              <p>Growing up in the heart of Ghana, I, Isaac Narteh, embarked on a journey shaped by a profound 
-                lack of access to computer education in the schools I attended. The absence of computers in the 
-                classrooms meant that countless children, including myself, missed out on acquiring crucial 
+              <p>Growing up in the heart of Ghana, Isaac Narteh, embarked on a journey shaped by a profound 
+                lack of access to computer education in the schools he attended. The absence of computers in the 
+                classrooms meant that countless children, including himself, missed out on acquiring crucial 
                 digital skills that have become indispensable in today's rapidly evolving world.
                 The realization of this digital divide became even more poignant when, after completing high school, 
-                I returned to my community to teach children in Grades 4, 5, and 6. Witnessing the same lack of 
-                resources in the classrooms mirrored my own childhood experiences. It was a stark reminder that the 
-                opportunities I wished for during my school days were still elusive for the younger generation.
-                Determined to make a difference, I pursued a journey across continents, landing in Berea College in the 
-                United States to study computers. Armed with knowledge and a burning passion for change, I founded the 
+                he returned to his community to teach children in Grades 4, 5, and 6. Witnessing the same lack of 
+                resources in the classrooms mirrored his own childhood experiences. It was a stark reminder that the 
+                opportunities he wished for during his school days were still elusive for the younger generation.
+                Determined to make a difference, he pursued a journey across continents, landing in Berea College in the 
+                United States to study computer science. Armed with knowledge and a burning passion for change, he founded the 
                 TiC Foundation — a non-profit organization with a singular mission: to empower young minds 
                 with practical computer skills.</p>
                 <br />

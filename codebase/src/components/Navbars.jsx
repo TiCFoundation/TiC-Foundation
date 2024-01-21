@@ -77,7 +77,7 @@ function Navbars() {
               duration={500}
               className="nav-link"
             >
-              Donate
+              Give Today
             </Link>
             <Link
               to="signup"
