@@ -35,7 +35,7 @@ TiC Foundation is a non-profit website aimed at providing underprivileged young 
    
 2.  Starts the development server.
     ```bash
-    npm start    
+    npm start  or npm run-script start  
 
 3. Bundles the app into static files for production.
     ```bash
