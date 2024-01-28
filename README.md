@@ -30,7 +30,7 @@ TiC Foundation is a non-profit website aimed at providing underprivileged young 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/TiC-Foundation.git
+   git clone https://github.com/nartehi/TiC-Foundation.git
 
    
 2.  Starts the development server.
