@@ -1,54 +1,56 @@
 /* footer.css */
 
 .footer {
-  display: flex;
-  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
-  justify-content: space-around;
   background-color: #333;
   color: #fff;
-  padding: 20px;
+  padding: 40px;
+  text-align: center;
 }
 
-.footer-column {
-  max-width: 300px;
-  margin-bottom: 20px; /* Spacing between columns on wrap */
+.footer-logo {
+  max-width: 100px; /* Adjust based on your actual logo size */
+  margin-bottom: 20px;
 }
 
-.footer h4 {
+.footer-title {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.social-links {
+  /* Add styles for social media icons */
+  margin: 20px 0;
+}
+
+.donate-button {
+  background-color: #e53e3e; /* Adjust color as needed */
   color: #fff;
-  margin-bottom: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
 
-.footer ul {
-  list-style: none;
-  padding: 0;
+.donate-button:hover {
+  background-color: #c53030; /* Darker shade for hover effect */
 }
 
-.footer li {
-  margin-bottom: 10px; /* Space between list items */
-}
-
-.footer a {
+.footer-nav a {
   color: #fff;
   text-decoration: none;
-  transition: color 0.3s; /* Smooth transition for hover effect */
+  margin: 0 10px;
 }
 
-.footer a:hover {
-  color: #007bff; /* Tech-inspired hover color */
+.footer-nav a:hover {
   text-decoration: underline;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .footer {
-    justify-content: center;
-    text-align: center;
-  }
-
-  .footer-column {
-    max-width: none; /* Allows columns to take full width on small screens */
-    margin-bottom: 20px;
+  .footer-nav a {
+    display: block;
+    margin: 10px 0;
   }
 }
 
