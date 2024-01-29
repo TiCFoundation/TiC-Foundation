@@ -120,9 +120,9 @@ function Footer() {
         <div className="footer-content">
           <img src={logo} alt="Foundation Logo" className="footer-logo" />
           <div className="footer-info">
-            <p>&copy; 2024 Foundation for Individual Rights and Expression</p>
-            <p>510 Walnut St. | Suite 900 Philadelphia, PA 19106</p>
-            <p>fire@thefire.org | 215-717-FIRE</p>
+            <p>&copy; 2024 Foundation for quality computer education.</p>
+            <p>101 Chestnut St. | CPO 1070 Berea, KY 40404</p>
+            <p>contact@tic.org | 859-391-8281</p>
           </div>
           <div className="footer-nav">
             <a href="#about">About</a>
@@ -136,11 +136,9 @@ function Footer() {
             <FontAwesomeIcon icon={faLinkedinIn} />
           </div>
           </div>
-          
           <button className={`donate-button ${atBottom ? 'show' : ''}`} onClick={handleBecomeMemberClick}>
   DONATE
 </button>
-
         </div>
       </footer>
 
