@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, Events, animateScroll as scroll } from 'react-scroll';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -8,8 +8,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from './img/logo.png';
 
 function Navbars() {
-  // Set up scroll event listener to handle scroll-based highlighting
-  React.useEffect(() => {
+  const [expanded, setExpanded] = useState(false); // State for Navbar expand
+
+  useEffect(() => {
     Events.scrollEvent.register('begin', function () {
       console.log('begin', arguments);
     });
@@ -23,13 +24,13 @@ function Navbars() {
     };
   }, []);
 
-  // Scroll to top when the logo is clicked
   const scrollToTop = () => {
     scroll.scrollToTop();
+    setExpanded(false); // Close navbar after scroll
   };
 
   return (
-    <Navbar className="navbar" expand="lg">
+    <Navbar expanded={expanded} className="navbar" expand="lg">
       <Container>
         <Navbar.Brand className="logo" onClick={scrollToTop}>
           <img
@@ -40,54 +41,67 @@ function Navbars() {
             alt="TiC Foundation logo"
           />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle 
+          aria-controls="basic-navbar-nav"
+          aria-expanded={expanded}
+          onClick={() => setExpanded(expanded ? false : "expanded")}
+          aria-label="Toggle navigation"
+        />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Link
-              to="home"
-              spy={true}
-              smooth={true}
-              duration={500}
-              className="nav-link"
-            >
-              Home
-            </Link>
-            <Link
-              to="about-us"
-              spy={true}
-              smooth={true}
-              duration={500}
-              className="nav-link"
-            >
-              About Us
-            </Link>
-            <Link
-              to="commitment"
-              spy={true}
-              smooth={true}
-              duration={500}
-              className="nav-link"
-            >
-              Commitments
-            </Link>
-            <Link
-              to="donate"
-              spy={true}
-              smooth={true}
-              duration={500}
-              className="nav-link"
-            >
-              Give Today
-            </Link>
-            <Link
-              to="signup"
-              spy={true}
-              smooth={true}
-              duration={500}
-              className="nav-link"
-            >
-              Sign Up
-            </Link>
+          <Nav className="ms-auto">
+  <Link
+    to="home"
+    spy={true}
+    smooth={true}
+    duration={500}
+    className="nav-link"
+    onClick={() => setExpanded(false)}
+  >
+    Home
+  </Link>
+  <Link
+    to="about-us"
+    spy={true}
+    smooth={true}
+    duration={500}
+    className="nav-link"
+    onClick={() => setExpanded(false)}
+  >
+    About Us
+  </Link>
+  <Link
+    to="commitment"
+    spy={true}
+    smooth={true}
+    duration={500}
+    className="nav-link"
+    onClick={() => setExpanded(false)}
+  >
+    Commitments
+  </Link>
+  <Link
+    to="donate"
+    spy={true}
+    smooth={true}
+    duration={500}
+    className="nav-link"
+    onClick={() => setExpanded(false)}
+  >
+    Give Today
+  </Link>
+  <Link
+    to="signup"
+    spy={true}
+    smooth={true}
+    duration={500}
+    className="nav-link"
+    onClick={() => setExpanded(false)}
+  >
+    Sign Up
+  </Link>
+</Nav>
+
           </Nav>
         </Navbar.Collapse>
       </Container>
