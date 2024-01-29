@@ -1,0 +1,60 @@
+// Donate.js
+
+import React, { useState, useEffect } from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+import { makeStyles } from '@material-ui/core/styles';
+import './Styles/donate.css';
+
+
+
+
+
+
+const useStyles = makeStyles((theme) => ({
+  textField: {
+    marginBottom: theme.spacing(3), // Adds space below each text field
+  },
+  donateButton: {
+    marginTop: theme.spacing(2), // Adds space above the button
+    backgroundColor: '#007bff', // Primary color for the button
+    color: 'white', // Text color for the button
+    '&:hover': {
+      backgroundColor: '#0056b3', // Color on hover
+    },
+  },
+
+}));
+
+
+
+function Donate() {
+  const classes = useStyles();
+  const [donationInfo, setDonationInfo] = useState({
+    name: '',
+    email: '',
+    amount: '',
+  
+  });
+
+
+useEffect(() => {
+  // ...effect logic
+}, [donationInfo]); // Dependency array includes donationInfo
+
+
+    
+const handleInputChange = (e) => {
+  setDonationInfo({ ...donationInfo, [e.target.name]: e.target.value });
+  };
+
+const handleDonate = () => {
+  const paypalEmail = 'isaackwamenarteh21@gmail.com';
+  const paypalLink = `https://paypal.me/${paypalEmail}?amount=${donationInfo.amount}`;
+  window.open(paypalLink, '_blank');
+};
+
+}
+
+export default Donate;

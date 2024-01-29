@@ -48,6 +48,15 @@ function ExecutivePage() {
         additionalDetails: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
       // Add more executives as needed
       },
+      {
+        id: 6,
+          name: 'Dimitrios Ntentia',
+          imageSrc: 'https://media.licdn.com/dms/image/D4E03AQHlqkrVCdKpUQ/profile-displayphoto-shrink_400_400/0/1698189889576?e=1712188800&v=beta&t=RpEWEjuh2FqmKTQ-meCmnc_jwMoYMIr4e7kQjTtQLAk',
+          role: 'Isaac friend 3',
+          workExperience: 'Electrical Engineer intern Trane Technologies',
+        //  additionalDetails: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        // Add more executives as needed
+        },
 
   ];
 

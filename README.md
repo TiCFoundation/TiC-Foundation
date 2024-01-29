@@ -41,22 +41,27 @@ TiC Foundation is a non-profit website aimed at providing underprivileged young 
     ```bash
     npm run build 
 
-4. Starts the test runner.
+4. Install UI framework.
+    ```bash 
+    npm install @material-ui/core
+
+
+5. Starts the test runner.
     ```bash
     npm test
-5. To create a production build
+6. To create a production build
     ```bash
     npm run build.
 
-6. Removes this tool and copies build dependencies, configuration files
+7. Removes this tool and copies build dependencies, configuration files
     and scripts into the app directory. If you do this, you can’t go back!
     ```bash
     npm run eject
 
-7. To run the app:
+8. To run the app:
     ```bash
     cd codebase
-8. To start develop server and see results in a web browser
+9. To start develop server and see results in a web browser
     ```bash
     npm start
 

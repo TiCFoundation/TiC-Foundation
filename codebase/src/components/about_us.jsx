@@ -3,6 +3,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import './Styles/about_us.css';
+import founderImage from './img/founder.png';
 
 function AboutUs() {
   return (
@@ -18,7 +19,7 @@ function AboutUs() {
                 regardless of their background, deserves access to quality computer education. 
                 Our journey is a testament to the transformative power of education, and we are 
                 committed to breaking down barriers and bridging the digital gap for children in 
-                underserved communities.Through our programs, we aim to provide hands-on, practical 
+                underserved communities. Through our programs, we aim to provide hands-on, practical 
                 learning experiences that go beyond traditional classroom settings. 
                 Our vision is not just to introduce computers but to ignite curiosity, foster creativity, 
                 and equip the next generation with the skills they need to thrive in the digital age.</p>
@@ -29,11 +30,10 @@ function AboutUs() {
       <section className="story-section">
         <Container>
           <Row>
-            <Col className="founder" md={6}>
-                <img src="./img/founder.jpg" className="founder" alt='founder'/>
+            <Col md={5} className="founder-image-col">
+              <img src={founderImage} className="founder-image" alt='founder'/> 
             </Col>
-
-            <Col md ={6}>
+            <Col md={7} className="founder-story-col">
               <h2 className='founderstory'>Our Founder's Story</h2>
               <br />
               <h4 className='bridge'> Early Experiences as Catalyst for Empowerment</h4>
@@ -67,9 +67,9 @@ function AboutUs() {
               <img src="https://seattlemedium.com/wp-content/uploads/2020/12/distance-learning-748X486.jpg" className="missionImage" alt="mission" />
             </Col>
             <Col md={6}>
-            <h2 className='ourVision'>Our Vision</h2>
+              <h2 className='ourVision'>Our Vision</h2>
               <p className='vision'> Our vision is to equip, motivate and empower underprivileged young people 
-                with computer compentencies by collaborating
+                with computer competencies by collaborating
                 with established educational institutions and organizations in Ghana and worldwide
                 </p>
               <img src="https://img.freepik.com/free-photo/portrait-black-child-while-doing-homework_641386-254.jpg?size=626&ext=jpg&ga=GA1.1.1412446893.1705104000&semt=ais"className='visionImage' alt="vision" />
@@ -77,8 +77,6 @@ function AboutUs() {
           </Row>
         </Container>
       </section>
-
-      {/* Add more sections as needed */}
     </div>
   );
 }

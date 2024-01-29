@@ -1,18 +1,20 @@
-/* donate.css */
-
 .donate {
   padding: 40px 0;
+  background-color: #f5f5f5; /* Light grey background for the whole donate section */
 }
 
 .donate h2 {
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 20px;
+  color: #333; /* Dark grey color for headings */
 }
 
 .donate p {
   font-size: 16px;
+  line-height: 1.6; /* Slightly increased line height for better readability */
   margin-bottom: 20px;
+  color: #666; /* Medium grey color for paragraphs */
 }
 
 .form-group {
@@ -22,10 +24,13 @@
 .form-label {
   font-size: 18px;
   font-weight: bold;
+  margin-bottom: 10px; /* Space between label and input field */
 }
 
 .form-control {
   height: 50px;
+  border-radius: 5px; /* Slightly rounded corners for input fields */
+  border: 1px solid #ccc; /* Light grey border for input fields */
 }
 
 .btn-primary {
@@ -34,6 +39,12 @@
   padding: 12px 20px;
   font-size: 18px;
   font-weight: bold;
+  border-radius: 5px; /* Rounded corners for the button */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
-/* Add more styles as needed */
+.btn-primary:hover {
+  background-color: #0056b3; /* Darker shade of blue for button hover state */
+}
+
+/* Additional styles for responsiveness and aesthetics can be added as needed */

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Styles/home.css'; // Create this CSS file for styling
-
+import './Styles/home.css';
 import backgroundImage1 from './img/image1.jpg';
 import backgroundImage2 from './img/image2.jpg';
 import backgroundImage3 from './img/image3.jpg';
@@ -35,25 +34,21 @@ const Home = () => {
   };
 
   return (
-    <div className="home" >
+    <div className="home">
       {images.map((image, index) => (
         <div
           key={index}
           className={`background-image ${currentImageIndex === index ? 'show' : ''}`}
           style={{ backgroundImage: `url(${image})` }}>
-
-        <div className="overlay">
-          <h3>The TiC Foundation</h3>
-          <br />
-          <h5>Unlocking Tech Dreams For Teens</h5>
-          <h1 className='date'>{formattedDate} , {currentTime}</h1>
-          <button onClick={handleDonateClick} className="btn btn-primary">Donate a Computer</button>
+          <div className="overlay">
+            <div className="text-box">
+              <h1>The TiC Foundation</h1>
+              <h5>Unlocking Tech Dreams For Teens</h5>
+              <h5 className='date-time'>{formattedDate} , {currentTime}</h5>
+              <button onClick={handleDonateClick} className="donate-button">Become a donor</button>
+            </div>
+          </div>
         </div>
-        {/* <div className='upper'>
-          <h5>We are here to inspire the young people for a technological change</h5>
-          <p>Join us to make a Change through Technology</p>
-        </div>    */}
-      </div>
       ))}
     </div>
   );

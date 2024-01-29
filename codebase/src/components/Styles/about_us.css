@@ -1,12 +1,27 @@
 /* about_us.css */
 
 .about-us {
-  padding: 20px; /* Adjust as needed */
+  padding: 20px;
 }
 
 .intro-section {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+}
+
+.founder-image-col {
+  text-align: center; /* Center the image */
+  padding: 20px;
+}
+
+.founder-image {
+  max-width: 100%; /* Make image responsive */
+  border-radius: 10px; /* Rounded corners for the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.founder-story-col {
+  padding: 20px;
 }
 
 .visuals-section img {

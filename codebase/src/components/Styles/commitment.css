@@ -7,6 +7,16 @@
 }
 
 
+.commitment-item {
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.commitment-item:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
