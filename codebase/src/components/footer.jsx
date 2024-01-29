@@ -4,6 +4,51 @@ import logo from './img/logo.png'; // Make sure the path is correct
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faTwitter, faLinkedinIn, faYoutube, faTiktok } from '@fortawesome/free-brands-svg-icons'; // Import necessary icons
 
+
+
+function DonationPopup({ show, onClose }) {
+  return show ? (
+    <div className="donation-overlay">
+      <div className="donation-popup">
+        <div className="donation-header">
+          <h2>Become a Member!</h2>
+          <button className="close-popup" onClick={onClose}>×</button>
+        </div>
+        <p>As a TIC member, you play a critical role in advancing Tic's mission to defend and sustain the individual rights of all Americans to free speech and free thought.</p>
+        <form className="donation-form">
+          <div className="donation-frequency">
+            <button type="button" className="frequency-option">Give once</button>
+            <button type="button" className="frequency-option selected">Annually</button>
+          </div>
+          <div className="donation-amounts">
+            <button type="button" className="amount-option">$1,000</button>
+            <button type="button" className="amount-option">$500</button>
+            <button type="button" className="amount-option">$250</button>
+            <button type="button" className="amount-option">$150</button>
+            <button type="button" className="amount-option">$100</button>
+            <button type="button" className="amount-option">$50</button>
+            <div className="custom-amount">
+              <input type="text" placeholder="$" />
+              <span>USD</span>
+            </div>
+          </div>
+          <div className="donation-dedicate">
+            <input type="checkbox" id="dedicate-donation" />
+            <label htmlFor="dedicate-donation">Dedicate this donation</label>
+          </div>
+          <div className="donation-comment">
+            <textarea placeholder="Add comment"></textarea>
+          </div>
+          <button type="submit" className="donate-submit-button">Donate</button>
+        </form>
+      </div>
+    </div>
+  ) : null;
+}
+
+
+
+
 function Footer() {
   const [atBottom, setAtBottom] = useState(false);
   const [showDonationPopup, setShowDonationPopup] = useState(false);
@@ -28,7 +73,45 @@ function Footer() {
     setShowDonationPopup(true);
   };
 
-
+  function DonationPopup({ show, onClose }) {
+    return show ? (
+      <div className="donation-overlay">
+        <div className="donation-popup">
+          <div className="donation-header">
+            <h2>Become a Member!</h2>
+            <button className="close-popup" onClick={onClose}>×</button>
+          </div>
+          <p>As a TIC member, you play a critical role in advancing TIC’s mission to provide every child, regardless of their background, deserves access to quality computer education.</p>
+          <form className="donation-form">
+            <div className="donation-frequency">
+              <button type="button" className="frequency-option">Give once</button>
+              <button type="button" className="frequency-option selected">Annually</button>
+            </div>
+            <div className="donation-amounts">
+              <button type="button" className="amount-option">$1,000</button>
+              <button type="button" className="amount-option">$500</button>
+              <button type="button" className="amount-option">$250</button>
+              <button type="button" className="amount-option">$150</button>
+              <button type="button" className="amount-option">$100</button>
+              <button type="button" className="amount-option">$50</button>
+              <div className="custom-amount">
+                <input type="text" placeholder="$" />
+                <span>USD</span>
+              </div>
+            </div>
+            <div className="donation-dedicate">
+              <input type="checkbox" id="dedicate-donation" />
+              <label htmlFor="dedicate-donation">Dedicate this donation</label>
+            </div>
+            <div className="donation-comment">
+              <textarea placeholder="Add comment"></textarea>
+            </div>
+            <button type="submit" className="donate-submit-button">Donate</button>
+          </form>
+        </div>
+      </div>
+    ) : null;
+  }
   // Add handleDonateSubmit or other functions as needed for your donation form
 
   return (
@@ -62,13 +145,10 @@ function Footer() {
       </footer>
 
       {showDonationPopup && (
-  <div className="donation-popup">
-    {/* Content for your donation form */}
-    <h2>Become a Member!</h2>
-    <p>As a TIC member, you play a critical role in advancing TIC’s mission to provide every child, regardless of their background, deserves access to quality computer education.</p>
-    {/* Include your donation form here */}
-    <button className="close-popup" onClick={() => setShowDonationPopup(false)}>Close</button>
-  </div>
+  <DonationPopup
+  show={showDonationPopup}
+  onClose={() => setShowDonationPopup(false)}
+/>
 )}
 
     </>

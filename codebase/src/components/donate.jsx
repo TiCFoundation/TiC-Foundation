@@ -60,7 +60,7 @@ function Donate() {
               </Form.Group>
 
               <Button variant="primary" onClick={handleDonate}>
-                Make a Donate
+                Make a Donation
               </Button>
             </Form>
           </Col>
