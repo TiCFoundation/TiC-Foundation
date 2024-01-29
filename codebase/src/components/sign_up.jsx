@@ -1,5 +1,3 @@
-// SignUp.js
-
 import React from 'react';
 import './Styles/signUp.css';
 import { Form, Button, Row, Col } from 'react-bootstrap';
@@ -8,21 +6,19 @@ function SignUp() {
   return (
     <div className="signup">
       <Row>
-        {/* Column for some text */}
-        <Col md={6}>
+        {/* Column for additional text and/or visuals */}
+        <Col md={6} className="signup-info">
+          <h3>Welcome to Our Community</h3>
           <p>
-            Additional information or text can be placed here to provide more details about the sign-up process.
+            Join our community to stay in the loop with the latest updates, participate in our programs, and connect with like-minded individuals. By signing up, you gain access to exclusive content, resources, and workshops that are designed to empower and inspire. Whether you're a beginner or an experienced tech enthusiast, there's something here for everyone.
           </p>
+          <img src="https://thumbs.dreamstime.com/b/community-concept-pictogram-showing-figures-happy-family-84451213.jpg" alt="Community" className="img-fluid" />
         </Col>
+
         {/* Column for the form */}
-       
-        <Col md={6}>
+        <Col md={6} className="signup-form">
           <h2>Sign Up</h2>
-
-          <p>
-            Create an account to stay updated and engage with our community.
-          </p>
-
+          <p>Create an account to stay updated and engage with our community.</p>
           <Form>
             <Form.Group controlId="formName">
               <Form.Label>Your Name</Form.Label>
@@ -44,11 +40,12 @@ function SignUp() {
             </Button>
           </Form>
         </Col>
-
-        
       </Row>
     </div>
   );
 }
 
 export default SignUp;
+
+
+

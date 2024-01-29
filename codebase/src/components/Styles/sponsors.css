@@ -1,23 +1,47 @@
 /* sponsors.css */
 
 .sponsors {
-    padding: 20px;
-  }
-  
-  .sponsors h2 {
-    text-align: center;
+  padding: 40px 0;
+  background-color: #f0f0f2;
+}
+
+.sponsors h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.sponsor-category {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.sponsors h3 {
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.sponsors img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sponsor-category {
+    width: 100%; /* Full width for smaller screens */
     margin-bottom: 20px;
   }
-  
-  .sponsors h3 {
-    color: #007bff;
-    margin-bottom: 10px;
-  }
-  
   .sponsors img {
-    max-width: 100%;
-    margin-bottom: 10px;
+    max-height: 120px; /* Adjusted height for mobile screens */
   }
-  
-  /* Add additional styles as needed */
-  
+}
+
+/* Additional responsive tweaks as needed */

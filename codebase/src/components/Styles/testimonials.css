@@ -28,5 +28,51 @@
     font-style: italic;
   }
   
+  /* testimonials.css */
+
+.testimonials {
+  padding: 40px 0;
+  background-color: #f0f0f2; /* Soft background color */
+  color: #333; /* Dark text for contrast */
+}
+
+.testimonials h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #007bff; /* Tech-inspired color */
+  font-weight: bold;
+}
+
+.testimonial-item {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #fff; /* White background for cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.testimonial-item img {
+  border-radius: 50%;
+  width: 120px; /* Fixed size for images */
+  height: 120px;
+  object-fit: cover; /* Ensure images fit well */
+  margin-bottom: 15px;
+  border: 3px solid #007bff; /* Border color */
+}
+
+.testimonial-item p {
+  font-size: 16px; /* Slightly larger font for readability */
+  margin-bottom: 15px;
+  line-height: 1.5; /* Improved line spacing */
+}
+
+.testimonial-item cite {
+  font-style: italic;
+  color: #666; /* Subtle color for citation */
+}
+
+/* Add additional styles as needed */
+
   /* Add additional styles as needed */
   

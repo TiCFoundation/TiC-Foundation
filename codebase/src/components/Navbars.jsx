@@ -49,59 +49,60 @@ function Navbars() {
         />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-          <Nav className="ms-auto">
-  <Link
-    to="home"
-    spy={true}
-    smooth={true}
-    duration={500}
-    className="nav-link"
-    onClick={() => setExpanded(false)}
-  >
-    Home
-  </Link>
-  <Link
-    to="about-us"
-    spy={true}
-    smooth={true}
-    duration={500}
-    className="nav-link"
-    onClick={() => setExpanded(false)}
-  >
-    About Us
-  </Link>
-  <Link
-    to="commitment"
-    spy={true}
-    smooth={true}
-    duration={500}
-    className="nav-link"
-    onClick={() => setExpanded(false)}
-  >
-    Commitments
-  </Link>
-  <Link
-    to="donate"
-    spy={true}
-    smooth={true}
-    duration={500}
-    className="nav-link"
-    onClick={() => setExpanded(false)}
-  >
-    Give Today
-  </Link>
-  <Link
-    to="signup"
-    spy={true}
-    smooth={true}
-    duration={500}
-    className="nav-link"
-    onClick={() => setExpanded(false)}
-  >
-    Sign Up
-  </Link>
-</Nav>
-
+          <Link
+              to="home"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className="nav-link"
+            >
+              Home
+            </Link>
+            <Link
+              to="about-us"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className="nav-link"
+            >
+              About Us
+            </Link>
+            <Link
+              to="commitment"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className="nav-link"
+            >
+              Commitments
+            </Link>
+            <Link
+              to="donate"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className="nav-link"
+            >
+              Give Today
+              </Link>
+            <Link
+              to="sponsors"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className="nav-link"
+            >
+              Sponsors
+            </Link>
+            <Link
+              to="signup"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className="nav-link"
+            >
+              Sign Up
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

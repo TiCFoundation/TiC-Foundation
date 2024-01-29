@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-scroll';
-import './Styles/footer.css'; // Don't forget to create a CSS file for styling
+import './Styles/footer.css'; // Ensure this file is updated
 
 function Footer() {
   return (
@@ -20,15 +20,15 @@ function Footer() {
         <h4>Connect With Us</h4>
         <ul>
           <li><a href="#social1">Instagram</a></li>
-          <li><a href="#social2">Social Link 2</a></li>
-          <li><a href="#social3">Social Link 3</a></li>
+          <li><a href="#social2">Facebook</a></li> {/* Example social media link */}
+          <li><a href="#social3">Twitter</a></li> {/* Example social media link */}
         </ul>
       </div>
 
       <div className="footer-column">
         <h4>Reach Out To Us</h4>
-        <p>Address: Your Address</p>
-        <p>Email: your.email@example.com</p>
+        <p>Address: 123 Tech Street, Innovation City</p>
+        <p>Email: contact@ticfoundation.org</p>
         <p>Phone: +1234567890</p>
       </div>
     </footer>
