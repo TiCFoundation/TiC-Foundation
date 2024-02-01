@@ -8,6 +8,7 @@ import { faFacebookF, faInstagram, faTwitter, faLinkedinIn, faYoutube, faTiktok 
 
 
 
+
 function Footer() {
   const [atBottom, setAtBottom] = useState(false);
   const [showDonationPopup, setShowDonationPopup] = useState(false);
@@ -74,26 +75,41 @@ function Footer() {
   // Add handleDonateSubmit or other functions as needed for your donation form
 
   return (
-    <footer className="footer">
-      <div className="footer-content">
-        <img src={logo} alt="Foundation Logo" className="footer-logo" />
-        <h2 className="footer-title">The TiC Foundation</h2>
-        <p className="copyright">&copy; {new Date().getFullYear()} Foundation for Unlocking Dreams for Teens</p>
-        <p className="address">101 Chestnut St. | CPO 900 Berea, KY 40404</p>
-        <p className="email">contact@tic.org | 859-391-8281</p>
-        <div className="social-links">
-          {/* Social media icons */}
+    <>
+      <footer className="footer">
+        <div className="footer-content">
+          <img src={logo} alt="Foundation Logo" className="footer-logo" />
+          <div className="footer-info">
+            <p>&copy; 2024 Foundation for quality computer education.</p>
+            <p>101 Chestnut St. | CPO 1070 Berea, KY 40404</p>
+            <p>contact@tic.org | 859-391-8281</p>
+          </div>
+          <div className="footer-nav">
+            <a href="#about">About</a>
+            <a href="#sponsors">Sponsors</a>
+            <a href="#privacy">Privacy</a>
+
+            <div className="footer-social">
+            <FontAwesomeIcon icon={faFacebookF} />
+            <FontAwesomeIcon icon={faInstagram} />
+            <FontAwesomeIcon icon={faTwitter} />
+            <FontAwesomeIcon icon={faLinkedinIn} />
+          </div>
+          </div>
+          <button className={`donate-button ${atBottom ? 'show' : ''}`} onClick={handleBecomeMemberClick}>
+  DONATE
+</button>
         </div>
-        <button onClick={handleDonateClick} className="donate-button">DONATE</button>
-        <div className="footer-nav">
-          <Link to="about-us" smooth={true} duration={500}>About Us</Link>
-          <Link to="contact" smooth={true} duration={500}>Contact Us</Link>
-          <Link to="commitments" smooth={true} duration={500}>Commitments</Link>
-          <Link to="donate" smooth={true} duration={500}>Give Today</Link>
-          <Link to="privacy" smooth={true} duration={500}>Privacy Statement</Link>
-        </div>
-      </div>
-    </footer>
+      </footer>
+
+      {showDonationPopup && (
+  <DonationPopup
+  show={showDonationPopup}
+  onClose={() => setShowDonationPopup(false)}
+/>
+)}
+
+    </>
   );
 }
 
