@@ -6,47 +6,6 @@ import { faFacebookF, faInstagram, faTwitter, faLinkedinIn, faYoutube, faTiktok 
 
 
 
-function DonationPopup({ show, onClose }) {
-  return show ? (
-    <div className="donation-overlay">
-      <div className="donation-popup">
-        <div className="donation-header">
-          <h2>Become a Member!</h2>
-          <button className="close-popup" onClick={onClose}>×</button>
-        </div>
-        <p>As a TIC member, you play a critical role in advancing Tic's mission to defend and sustain the individual rights of all Americans to free speech and free thought.</p>
-        <form className="donation-form">
-          <div className="donation-frequency">
-            <button type="button" className="frequency-option">Give once</button>
-            <button type="button" className="frequency-option selected">Annually</button>
-          </div>
-          <div className="donation-amounts">
-            <button type="button" className="amount-option">$1,000</button>
-            <button type="button" className="amount-option">$500</button>
-            <button type="button" className="amount-option">$250</button>
-            <button type="button" className="amount-option">$150</button>
-            <button type="button" className="amount-option">$100</button>
-            <button type="button" className="amount-option">$50</button>
-            <div className="custom-amount">
-              <input type="text" placeholder="$" />
-              <span>USD</span>
-            </div>
-          </div>
-          <div className="donation-dedicate">
-            <input type="checkbox" id="dedicate-donation" />
-            <label htmlFor="dedicate-donation">Dedicate this donation</label>
-          </div>
-          <div className="donation-comment">
-            <textarea placeholder="Add comment"></textarea>
-          </div>
-          <button type="submit" className="donate-submit-button">Donate</button>
-        </form>
-      </div>
-    </div>
-  ) : null;
-}
-
-
 
 
 function Footer() {
