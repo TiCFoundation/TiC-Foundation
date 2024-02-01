@@ -15,7 +15,7 @@ function Footer() {
       <div className="footer-content">
         <img src={logo} alt="Foundation Logo" className="footer-logo" />
         <h2 className="footer-title">The TiC Foundation</h2>
-        <p className="copyright">&copy; 2024 Foundation for Unlocking Dreams for Teens</p>
+        <p className="copyright">&copy; {new Date().getFullYear()} Foundation for Unlocking Dreams for Teens</p>
         <p className="address">101 Chestnut St. | CPO 900 Berea, KY 40404</p>
         <p className="email">contact@tic.org | 859-391-8281</p>
         <div className="social-links">
