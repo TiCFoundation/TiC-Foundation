@@ -1,57 +1,203 @@
 /* footer.css */
 
 .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #333;
   color: #fff;
-  padding: 40px;
-  text-align: center;
+  padding: 20px;
+  flex-wrap: wrap; /* Allow items to wrap */
+}
+
+.footer-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allow items to wrap */
 }
 
 .footer-logo {
-  max-width: 100px; /* Adjust based on your actual logo size */
-  margin-bottom: 20px;
+  flex: 0 1 150px; /* Flex basis of 150px but it can grow or shrink */
+  max-width: 100%; /* Ensure it doesn't overflow its container */
 }
 
-.footer-title {
-  font-size: 2em;
-  margin-bottom: 10px;
+.footer-info, .footer-nav  {
+  flex: 1; /* Take up equal space */
+  text-align: center;
+  margin: 10px 0; /* Add some margin for spacing */
 }
 
-.social-links {
-  /* Add styles for social media icons */
-  margin: 20px 0;
+.footer-social {
+  /* Assuming .footer-social wraps your social media icons */
+  display: flex;
+  justify-content: center; /* This will center the icons in the footer */
+  align-items: center;
+  gap: 20px; /* This property creates space between each flex item */
 }
 
-.donate-button {
-  background-color: #e53e3e; /* Adjust color as needed */
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-bottom: 20px;
+.social-icon {
+  margin: 0 35px; /* Increase the left and right margin to add more space between icons */
+  /* Adjust the margin value as needed to get the desired spacing */
 }
 
-.donate-button:hover {
-  background-color: #c53030; /* Darker shade for hover effect */
+.footer-info {
+  order: 1; /* Rearrange order on smaller screens */
+}
+
+.footer-nav, .footer-social {
+  order: 2;
 }
 
 .footer-nav a {
   color: #fff;
+  margin: 0 15px;
   text-decoration: none;
-  margin: 0 10px;
 }
 
 .footer-nav a:hover {
   text-decoration: underline;
 }
 
+.social-links {
+  display: flex;
+  justify-content: center; /* Center social links */
+}
+
+.donate-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  position: fixed; /* Make donate button fixed */
+  bottom: 20px; /* Position from the bottom */
+  right: 20px; /* Position from the right */
+  opacity: 0; /* Start hidden */
+  visibility: hidden; /* Start hidden */
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.donate-button:hover {
+  background-color: #0056b3;
+}
+.show {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* Show the donate button when scrolling to bottom */
+/* It will require JavaScript to toggle a class based on scroll position */
+.show-donate {
+  opacity: 1;
+  visibility: visible;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
-  .footer-nav a {
-    display: block;
-    margin: 10px 0;
+  .footer {
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .footer-logo {
+    flex: 1 0 100%; /* Take full width on small screens */
+    margin-bottom: 20px; /* Add space below the logo */
+  }
+
+  .footer-info, .footer-nav, .footer-social {
+    flex: 1 0 100%; /* Take full width on small screens */
+    order: 3; /* Put the info at the bottom */
+    margin-bottom: 10px; /* Adjust margin for spacing */
+  }
+
+  .donate-button {
+    position: static; /* Static position on small screens */
+    width: 100%; /* Full width button */
+    margin: 10px 0; /* Space around the button */
+    opacity: 1;
+    visibility: visible;
   }
 }
 
-/* Additional responsive tweaks as needed */
+
+
+.donation-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+
+.donation-popup {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.donation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-popup {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.donation-form {
+  /* Additional styles for your form */
+}
+
+.donation-frequency .frequency-option {
+  /* Styles for frequency options */
+}
+
+.donation-frequency .frequency-option.selected {
+  /* Styles for the selected frequency option */
+}
+
+.donation-amounts .amount-option {
+  /* Styles for amount options */
+}
+
+.donation-amounts .custom-amount {
+  /* Styles for custom amount input */
+}
+
+.donation-dedicate {
+  margin-top: 20px;
+}
+
+.donation-comment textarea {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.donate-submit-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+}
