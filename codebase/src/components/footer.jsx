@@ -85,7 +85,7 @@ function Footer() {
             <p>contact@tic.org | 859-391-8281</p>
           </div>
           <div className="footer-nav">
-            <a href="#about">About</a>
+            <a href="about_us">About</a>
             <a href="#sponsors">Sponsors</a>
             <a href="#privacy">Privacy</a>
 
