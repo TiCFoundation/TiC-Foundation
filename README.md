@@ -28,41 +28,46 @@ TiC Foundation is a non-profit website aimed at providing underprivileged young 
 ### Installation
 
 1. Clone the repository:
-
    ```bash
    git clone https://github.com/nartehi/TiC-Foundation.git
 
+2.  Create a branch before start developing:
+   ```bash
+   example: git branch issue#
+
+3. cd into codebase:
+    ```bash
+    cd codebase
    
-2.  Starts the development server.
+3. Install npm.
+    ```bash
+    npm i or npm install
+
+4. Starts the development server.
     ```bash
     npm start  or npm run-script start  
 
-3. Bundles the app into static files for production.
-    ```bash
-    npm run build 
-
-4. Install UI framework.
+5. Install UI framework.
     ```bash 
     npm install @material-ui/core
 
-
-5. Starts the test runner.
+6. Start the test runner.
     ```bash
     npm test
-6. To create a production build
+7. To create a production build
     ```bash
     npm run build.
 
-7. Removes this tool and copies build dependencies, configuration files
+8. Removes this tool and copies build dependencies, configuration files
     and scripts into the app directory. If you do this, you can’t go back!
     ```bash
     npm run eject
 
-8. To run the app:
+9. Bundles the app into static files for production.
     ```bash
-    cd codebase
-9. To start develop server and see results in a web browser
-    ```bash
-    npm start
+    npm run build 
+
+
+
 
 
