@@ -33,15 +33,15 @@ TiC Foundation is a non-profit website aimed at providing underprivileged young 
 
 2.  Create a branch before start developing:
    ```bash
-      example: git branch issue#
+   git branch issue#
 
 3. cd into codebase:
     ```bash
-       cd codebase
+   cd codebase
    
 3. Install npm.
     ```bash
-       npm i or npm install
+   npm i or npm install
 
 4. Starts the development server.
     ```bash
