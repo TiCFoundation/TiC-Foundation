@@ -52,12 +52,14 @@
 
 .footer-nav a {
   color: #fff;
-  margin: 0 15px;
   text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for hover effects */
 }
 
 .footer-nav a:hover {
-  text-decoration: underline;
+  color: #007bff;
+  transform: translateY(-2px); 
 }
 
 .social-links {
