@@ -25,7 +25,7 @@ TiC Foundation is a non-profit website aimed at providing underprivileged young 
 - [Node.js](https://nodejs.org/) installed
 - [Firebase](https://firebase.google.com/) account (for backend services)
 
-### Installation
+### Contributing
 
 1. Clone the repository:
    ```bash
@@ -39,23 +39,23 @@ TiC Foundation is a non-profit website aimed at providing underprivileged young 
     ```bash
    cd codebase
    
-3. Install npm.
+3. Install npm:
     ```bash
    npm i or npm install
 
-4. Starts the development server.
+4. Starts the development server:
     ```bash
     npm start  or npm run-script start  
 
-5. Install UI framework.
+5. Install UI framework:
     ```bash 
     npm install @material-ui/core
 
-6. Start the test runner.
+6. Start the test runner:
     ```bash
     npm test
 
-7. To create a production build
+7. To create a production build:
     ```bash
     npm run build.
 
@@ -68,7 +68,13 @@ TiC Foundation is a non-profit website aimed at providing underprivileged young 
     ```bash
     npm run build 
 
+### To See Latest Changes From Develop branch in your branch
 
+#### Steps:
+1. Checkout dev branch (git checkout develop)
+2. Get the latest of develop branch (git pull)
+3. Checkout branch your_branch (git checkout your_branch here)
+4. Merge dev branch to branch your_branch (git merge develeop)
 
 
 
