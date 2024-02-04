@@ -31,11 +31,11 @@ TiC Foundation is a non-profit website aimed at providing underprivileged young 
    ```bash
    git clone https://github.com/nartehi/TiC-Foundation.git
 
-2.  Create a branch before start developing:
+2. Create a branch before start developing:
    ```bash
    git branch issue_description:
 
-3. cd into codebase:
+3. Change directory into codebase:
     ```bash
    cd codebase
    
