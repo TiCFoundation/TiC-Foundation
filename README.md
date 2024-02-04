@@ -33,7 +33,7 @@ TiC Foundation is a non-profit website aimed at providing underprivileged young 
 
 2.  Create a branch before start developing:
    ```bash
-   git branch issue#
+   git branch issue_description:
 
 3. cd into codebase:
     ```bash
