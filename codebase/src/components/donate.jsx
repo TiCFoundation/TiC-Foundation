@@ -1,13 +1,25 @@
 // Donate.js
-
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import './Styles/donate.css';
+import paypalLogo from './img/paypal.png'; // Replace with your actual import paths
+import visaLogo from './img/visa.png';
+import mastercardLogo from './img/mastercard.png';
+import amexLogo from './img/amex.png';
+
+
 
 function Donate() {
+  const [donateAnonymously, setDonateAnonymously] = useState(true);
+  const handleDonateAnonymouslyChange = () => {
+    setDonateAnonymously(!donateAnonymously);
+  };
+
+
   const handleDonate = () => {
     // Replace 'YOUR_PAYPAL_EMAIL' with your actual PayPal email
     const paypalEmail = 'isaackwamenarteh21@gmail.com';
+
 
     // Fetch the donation amount from the form or set it directly
     const donationAmount = document.getElementById('formAmount').value || 10;
@@ -17,58 +29,137 @@ function Donate() {
 
     // Open the PayPal donation link in a new tab
     window.open(paypalLink, '_blank');
+    const allCountriesOptions = () => {
+      // Here you would return an array of all countries. For brevity, we'll show just a few.
+      return [
+        "United States of America (USA)",
+        "United Kingdom (UK)",
+        "Canada",
+        "Australia",
+      ].map((country) => <option key={country} value={country}>{country}</option>);
+      
+    };
   };
 
   return (
-    <div className="donate">
-      <Container>
-        <Row>
-          {/* Text and Image Column */}
-          <Col md={6}>
-            <h2>Join Us in Making a Difference</h2>
-            <p>
-            Our story is one of resilience, determination, and the unwavering belief that 
-            education has the power to transform lives. We invite you to be a part of our journey. 
-            Your support will enable the <strong>TiC Foundation</strong> to expand its reach, bring computers to 
-            more classrooms, and empower countless children with the tools they need to shape their futures.
-            Together, let's build a world where every child has the opportunity to unlock their potential through technology. 
-            Join us in making a difference, one computer at a time.
-              Your generous donation helps us continue our mission and support the community. 
-              Thank you for your contribution!
-            </p>
-            <h5>Donate today and be a catalyst for change. Together, we are #TechInspiredChange.</h5>
-            {/* Add your image here */}
-            <img src="https://pbs.twimg.com/media/EwwHSE9XIAAur16.jpg" alt="Our Impact" className="img-fluid" />
-          </Col>
-          {/* Donation Form Column */}
-          <Col md={6}>
-            <h2>Donate to Support Our Cause</h2>
-            <Form>
-              <Form.Group controlId="formName">
-                <Form.Label>Your Name</Form.Label>
-                <Form.Control type="text" placeholder="Enter your name" />
-              </Form.Group>
-
-              <Form.Group controlId="formEmail">
-                <Form.Label>Email Address</Form.Label>
-                <Form.Control type="email" placeholder="Enter your email" />
-              </Form.Group>
-
-              <Form.Group controlId="formAmount">
-                <Form.Label>Donation Amount</Form.Label>
-                <Form.Control type="number" placeholder="Enter the amount" />
-              </Form.Group>
-
-              <Button variant="primary" onClick={handleDonate}>
-                Make a Donation
+    <Container className="donate-container my-5">
+      <Row className="align-items-center mb-4">
+        <Col md={6}>
+          <h2>You are donating to:</h2>
+          <h3>Every child having a quality Computer Education</h3>
+           <p>Your generous donation helps us continue our mission and support the community. 
+            Thank you for your contribution!</p>
+          <img src="https://www.eifl.net/sites/default/files/styles/resources_detail_page/public/2015-11-24_eifl_librairy_launch-0433_3.jpg?itok=huqn1RqA" alt="Impact" className="img-fluid" />
+        </Col>
+        <Col md={6}>
+          <div className="donation-amount-section">
+            <h4>Select Donation Amount</h4>
+            <div className="donation-amount-buttons">
+              <Button variant="outline-primary" className="donation-amount">$20</Button>
+              <Button variant="outline-primary" className="donation-amount">$50</Button>
+              <Button variant="outline-primary" className="donation-amount">$99</Button>
+              <Button variant="outline-primary" className="donation-amount">$249</Button>
+              <Button variant="outline-primary" className="donation-amount">$499</Button>
+              <Button variant="outline-primary" className="donation-amount">$999</Button>
+            </div>
+            <Form.Group controlId="formOtherAmount">
+              <Form.Label>Other Amount (USD)</Form.Label>
+              <Form.Control type="number" placeholder="Enter other amount" />
+            </Form.Group>
+            <h4>Payment Method</h4>
+            <div className="payment-methods">
+              <Button variant="outline-secondary" className="payment-method">
+                <img src={paypalLogo} alt="PayPal" />
               </Button>
-            </Form>
-          </Col>
+              <Button variant="outline-secondary" className="payment-method">
+                <img src={visaLogo} alt="Visa" />
+              </Button>
+              <Button variant="outline-secondary" className="payment-method">
+                <img src={mastercardLogo} alt="MasterCard" />
+              </Button>
+              <Button variant="outline-secondary" className="payment-method">
+                <img src={amexLogo} alt="American Express" />
+              </Button>
+            </div>
+            <Form.Group controlId="formFrequency">
+              <Form.Label>Frequency</Form.Label>
+              <Form.Control as="select" defaultValue="Monthly">
+                <option value="One Time">One Time</option>
+                <option value="Monthly">Monthly</option>
+                <option value="Weekly">Weekly</option>
+                <option value="Yearly">Yearly</option>
+              </Form.Control>
+            </Form.Group>
+            <Button variant="success" onClick={handleDonate} className="w-100 mt-3">
+              Donate Now
+            </Button>
+          </div>
+        </Col>
+      </Row>
+      <Row>
+      <Col md={6} className="donate-info">
+          <Form>
+            <Form.Check 
+              type="checkbox"
+              id="anonymousCheck"
+              label="Donate anonymously"
+              checked={donateAnonymously}
+              onChange={handleDonateAnonymouslyChange}
+            />
+            {!donateAnonymously && (
+              <>
+                <h4>Personal Details</h4>
+                <Form.Group controlId="formFirstName">
+                  <Form.Control required type="text" placeholder="First Name*" />
+                </Form.Group>
+                <Form.Group controlId="formLastName">
+                  <Form.Control required type="text" placeholder="Last Name*" />
+                </Form.Group>
+                <Form.Group controlId="formEmail">
+                  <Form.Control required type="email" placeholder="Email*" />
+                </Form.Group>
+                <Form.Group controlId="formPhone">
+                  <Form.Control required type="tel" placeholder="Phone*" />
+                </Form.Group>
+                <Form.Group controlId="formAddress">
+                  <Form.Control type="text" placeholder="Contact Address" />
+                </Form.Group>
+                <Form.Group controlId="formCountry">
+                  <Form.Label>Country</Form.Label>
+                  <Form.Control as="select" defaultValue="Choose...">
+                    {/* Populate this list with actual countries */}
+                    <option value="USA">United States of America (USA)</option>
+                    <option value="GHA">Ghana (GHA)</option>
+                    <option value="BR">Brazil (BR)</option>
+                    <option value="UK">United Kingdom (UK)</option>
+                    <option value="FRA">France (FRA)</option>
+                    <option value="GAM">The Gambia (GAM)</option>
+                    <option value="KEN"> Kenya (KEN)</option>
+                    <option value="MOR">Morocco (MOR)</option>
+                    <option value="NIG">Nigeria (NIG)</option>
+                    <option value="UG">Uganda (UG)</option>
+                    <option value="RW">Rwanda (RW)</option>
+                    <option value="LI">Liberia (LI)</option>
+                    <option value="LEB">Lebanon (LEB)</option>
+                    <option value="HAI">Haiti (HAI)</option>
+                    
+                    
+                    {/* Add other countries */}
+                  </Form.Control>
+                </Form.Group>
+              </>
+            )}
+            <h4>Our Promises to You</h4>
+            <p>Without your loyal support, we can not do the vital work we do. 
+              That's why we promise to uphold integrity in our operations and make sure every contributions is put to use
+              to benefit those who need it most.
 
-          
-        </Row>
-      </Container>
-    </div>
+            </p>
+          </Form>
+        </Col>
+        
+      </Row>
+    </Container>
   );
 }
 

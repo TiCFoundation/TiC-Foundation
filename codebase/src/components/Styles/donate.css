@@ -46,5 +46,66 @@
 .btn-primary:hover {
   background-color: #0056b3; /* Darker shade of blue for button hover state */
 }
+.donate-container {
+  padding: 40px;
+  background-color: #f5f5f5;
+}
+
+.donate-row {
+  margin-bottom: 30px;
+}
+
+.donate-info {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.donate-form {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-left: 20px; /* Adjust as needed for spacing */
+}
+
+.donation-amounts button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+
+/* Add to your existing styles */
+
+.payment-methods button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  /* You may want to add styles for the payment method logos */
+}
+
+/* You may need to adjust the button styles to fit your design */
+
+/* Styles for the donation frequency dropdown */
+.form-control[type="select"] {
+  /* Style your select dropdown here */
+}
+
+/* Existing styles... */
+
+/* Add styles for payment method buttons */
+.payment-methods .payment-method {
+  border: none;
+  background: none;
+  padding: 5px 10px;
+}
+
+.payment-methods .payment-method img {
+  width: 50px; /* Set the width as needed */
+  height: auto;
+  margin-right: 10px;
+}
+
+/* Style adjustments for the form controls and donation buttons as necessary */
+
+/* Update styles for the buttons, form controls, and text to match the screenshot */
 
 /* Additional styles for responsiveness and aesthetics can be added as needed */

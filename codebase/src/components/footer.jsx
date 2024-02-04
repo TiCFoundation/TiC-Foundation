@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react'; // Ensure useEffect is imported here
-import './Styles/footer.css'; // Ensure this file is updated
-import logo from './img/logo.png'; // Make sure the path is correct
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-scroll';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import './Styles/footer.css';
+import logo from './img/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faInstagram, faTwitter, faLinkedinIn, faYoutube, faTiktok } from '@fortawesome/free-brands-svg-icons'; // Import necessary icons
+import { faFacebookF, faInstagram, faTwitter, faLinkedinIn, faYoutube, faTiktok } from '@fortawesome/free-brands-svg-icons';
 
 
 
@@ -85,9 +87,9 @@ function Footer() {
             <p>contact@tic.org | 859-391-8281</p>
           </div>
           <div className="footer-nav">
-            <a href="about_us">About</a>
-            <a href="#sponsors">Sponsors</a>
-            <a href="#privacy">Privacy</a>
+            <Link to="about-us" spy={true} smooth={true} duration={500}>About</Link>
+            <Link to="sponsors" spy={true} smooth={true} duration={500}>Sponsors</Link>
+            <Link to="privacy" spy={true} smooth={true} duration={500}>Privacy</Link>
 
             <div className="footer-social">
             <FontAwesomeIcon icon={faFacebookF} />
