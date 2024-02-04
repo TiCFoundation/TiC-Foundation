@@ -2,10 +2,10 @@
 import React, { useState, useEffect } from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import './Styles/donate.css';
-import paypalLogo from '/Users/dntentia/Library/CloudStorage/OneDrive-BereaCollege/Spring 2024/TiC-Foundation/codebase/src/components/img/paypal.png'; // Replace with your actual import paths
-import visaLogo from '/Users/dntentia/Library/CloudStorage/OneDrive-BereaCollege/Spring 2024/TiC-Foundation/codebase/src/components/img/visa.png';
-import mastercardLogo from '/Users/dntentia/Library/CloudStorage/OneDrive-BereaCollege/Spring 2024/TiC-Foundation/codebase/src/components/img/mastercard.png';
-import amexLogo from '/Users/dntentia/Library/CloudStorage/OneDrive-BereaCollege/Spring 2024/TiC-Foundation/codebase/src/components/img/amex.png';
+import paypalLogo from './img/paypal.png'; // Replace with your actual import paths
+import visaLogo from './img/visa.png';
+import mastercardLogo from './img/mastercard.png';
+import amexLogo from './img/amex.png';
 
 
 
@@ -55,6 +55,8 @@ function Donate() {
           <div className="donation-amount-section">
             <h4>Select Donation Amount</h4>
             <div className="donation-amount-buttons">
+              <Button variant="outline-primary" className="donation-amount">$20</Button>
+              <Button variant="outline-primary" className="donation-amount">$50</Button>
               <Button variant="outline-primary" className="donation-amount">$99</Button>
               <Button variant="outline-primary" className="donation-amount">$249</Button>
               <Button variant="outline-primary" className="donation-amount">$499</Button>
@@ -127,13 +129,32 @@ function Donate() {
                   <Form.Control as="select" defaultValue="Choose...">
                     {/* Populate this list with actual countries */}
                     <option value="USA">United States of America (USA)</option>
+                    <option value="GHA">Ghana (GHA)</option>
+                    <option value="BR">Brazil (BR)</option>
+                    <option value="UK">United Kingdom (UK)</option>
+                    <option value="FRA">France (FRA)</option>
+                    <option value="GAM">The Gambia (GAM)</option>
+                    <option value="KEN"> Kenya (KEN)</option>
+                    <option value="MOR">Morocco (MOR)</option>
+                    <option value="NIG">Nigeria (NIG)</option>
+                    <option value="UG">Uganda (UG)</option>
+                    <option value="RW">Rwanda (RW)</option>
+                    <option value="LI">Liberia (LI)</option>
+                    <option value="LEB">Lebanon (LEB)</option>
+                    <option value="HAI">Haiti (HAI)</option>
+                    
+                    
                     {/* Add other countries */}
                   </Form.Control>
                 </Form.Group>
               </>
             )}
             <h4>Our Promises to You</h4>
-            <p>Without your loyal support, we couldn't do the vital work we do. That's why we promise to uphold</p>
+            <p>Without your loyal support, we can not do the vital work we do. 
+              That's why we promise to uphold integrity in our operations and make sure every contributions is put to use
+              to benefit those who need it most.
+
+            </p>
           </Form>
         </Col>
         
