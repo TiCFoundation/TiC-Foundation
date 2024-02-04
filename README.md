@@ -68,6 +68,17 @@ TiC Foundation is a non-profit website aimed at providing underprivileged young 
     ```bash
     npm run build 
 
+10. If you have issues with build, install the following fonts:
+    ```bash
+    npm install --save @fortawesome/fontawesome-svg-core
+    npm install --save @fortawesome/free-solid-svg-icons
+    npm install --save @fortawesome/free-brands-svg-icons
+    npm install --save @fortawesome/react-fontawesome
+    npm install react-scroll
+    npm install react-router-dom
+    npm install react-router-dom
+
+    
 ### To See Latest Changes From Develop branch in your branch
 
 #### Steps:
