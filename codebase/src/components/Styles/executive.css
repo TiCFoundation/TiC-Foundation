@@ -32,7 +32,11 @@
   max-width: 1200px;
 }
 
-
+.executives {
+  text-align: center;
+  padding: 3%;
+  font-size: 30px;
+}
 .executive-page {
     padding: 40px 0;
     background-color: #f8f9fa;

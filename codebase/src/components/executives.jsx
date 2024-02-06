@@ -63,7 +63,7 @@ function ExecutivePage() {
   return (
     <div className="executive-page">
       <Container>
-        <h2>Our Executives</h2>
+        <h2 className='executives'>Our Executives</h2>
         <Row>
           {executives.map((executive) => (
             <Col key={executive.id} md={4}>
