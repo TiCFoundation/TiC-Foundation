@@ -4,6 +4,12 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './Styles/footer.css';
 import logo from './img/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { 
+  faFacebookSquare, 
+  faInstagramSquare, 
+  faTwitterSquare, 
+  faLinkedin 
+} from '@fortawesome/free-brands-svg-icons';
 import { faFacebookF, faInstagram, faTwitter, faLinkedinIn, faYoutube, faTiktok } from '@fortawesome/free-brands-svg-icons';
 
 
@@ -14,6 +20,8 @@ import { faFacebookF, faInstagram, faTwitter, faLinkedinIn, faYoutube, faTiktok 
 function Footer() {
   const [atBottom, setAtBottom] = useState(false);
   const [showDonationPopup, setShowDonationPopup] = useState(false);
+  const [showDetails, setShowDetails] = useState(false);
+  const toggleDetails = () => setShowDetails(!showDetails);
 
   // Correctly using useEffect in the component body, not inside another function
   useEffect(() => {
@@ -76,32 +84,50 @@ function Footer() {
   }
   // Add handleDonateSubmit or other functions as needed for your donation form
 
+
   return (
     <>
       <footer className="footer">
+        
         <div className="footer-content">
-          <img src={logo} alt="Foundation Logo" className="footer-logo" />
+        <iframe
+          className="google-map"
+          title="location"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3154.101886733117!2d-84.29631238437577!3d37.56864997979743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88424d2d3f6b8a05%3A0xb9cc1a8e479a6c25!2s101%20Chestnut%20St%2C%20Berea%2C%20KY%2040404%2C%20USA!5e0!3m2!1sen!2sbg!4v1641234567890"
+          width="350"
+          height="270"
+          style={{ border: 0 }}
+          allowFullScreen=""
+          loading="lazy"
+        ></iframe>
           <div className="footer-info">
-            <p>&copy; 2024 Foundation for quality computer education.</p>
+            
+          <p>&copy; 2024 Foundation for quality computer education.</p>
             <p>101 Chestnut St. | CPO 1070 Berea, KY 40404</p>
             <p>contact@tic.org | 859-391-8281</p>
+            
           </div>
           <div className="footer-nav">
+            
             <Link to="about-us" spy={true} smooth={true} duration={500}>About</Link>
             <Link to="sponsors" spy={true} smooth={true} duration={500}>Sponsors</Link>
             <Link to="privacy" spy={true} smooth={true} duration={500}>Privacy</Link>
+            
 
             <div className="footer-social">
-            <FontAwesomeIcon icon={faFacebookF} />
-            <FontAwesomeIcon icon={faInstagram} />
-            <FontAwesomeIcon icon={faTwitter} />
-            <FontAwesomeIcon icon={faLinkedinIn} />
-          </div>
+              <FontAwesomeIcon icon={faFacebookSquare} />
+              <FontAwesomeIcon icon={faInstagramSquare} />
+              <FontAwesomeIcon icon={faTwitterSquare} />
+              <FontAwesomeIcon icon={faLinkedin} />
+            </div>
+          
           </div>
           <button className={`donate-button ${atBottom ? 'show' : ''}`} onClick={handleBecomeMemberClick}>
   DONATE
 </button>
+
         </div>
+        
       </footer>
 
       {showDonationPopup && (
