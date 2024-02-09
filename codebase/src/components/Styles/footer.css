@@ -319,3 +319,6 @@
    based on the specific layout and styling of your footer links. */
 
 /* Additional responsive tweaks as needed */
+.google-map{
+  border-radius: 20px;
+}
