@@ -103,6 +103,15 @@ function Navbars() {
             >
               Sign Up
             </Link>
+            <Link
+              to="profile"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className="nav-link"
+            >
+              Profile
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
