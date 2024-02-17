@@ -8,7 +8,8 @@ import SignUp from './components/sign_up';
 import Footer from './components/footer';
 import Sponsors from './components/sponsors';
 import Testimonials from './components/testimonials';
-import ExecutivePage from './components/executives'
+import ExecutivePage from './components/executives';
+import Login from './components/login'
 // import './App.css';
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Sponsors/>
       <SignUp />
       <Footer />
+      <Login/>
     </div>
   );
 }
