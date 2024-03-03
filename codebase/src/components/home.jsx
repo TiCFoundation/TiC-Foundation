@@ -5,6 +5,7 @@ import backgroundImage2 from './img/image2.jpg';
 import backgroundImage3 from './img/image3.jpg';
 import backgroundImage4 from './img/image4.jpg';
 import backgroundImage5 from './img/image5.jpg';
+import { Link } from 'react-router-dom';
 
 const images = [backgroundImage1, backgroundImage2, backgroundImage3, backgroundImage4, backgroundImage5];
 
@@ -45,6 +46,7 @@ const Home = () => {
               <h1>The TiC Foundation</h1>
               <h5>Unlocking Tech Dreams For Teens</h5>
               <h5 className='date-time'>{formattedDate} , {currentTime}</h5>
+  
               <button onClick={handleDonateClick} className="donate-button">Become a donor</button>
             </div>
           </div>

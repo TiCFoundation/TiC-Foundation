@@ -1,111 +1,114 @@
+/* General styling for the donate section */
 .donate {
   padding: 40px 0;
-  background-color: #f5f5f5; /* Light grey background for the whole donate section */
+  background-color: #f5f5f5; /* Light grey background */
 }
 
-.donate h2 {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #333; /* Dark grey color for headings */
-}
-
-.donate p {
-  font-size: 16px;
-  line-height: 1.6; /* Slightly increased line height for better readability */
-  margin-bottom: 20px;
-  color: #666; /* Medium grey color for paragraphs */
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-.form-label {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px; /* Space between label and input field */
-}
-
-.form-control {
-  height: 50px;
-  border-radius: 5px; /* Slightly rounded corners for input fields */
-  border: 1px solid #ccc; /* Light grey border for input fields */
-}
-
-.btn-primary {
-  background-color: #007bff;
-  border: none;
-  padding: 12px 20px;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 5px; /* Rounded corners for the button */
-  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-}
-
-.btn-primary:hover {
-  background-color: #0056b3; /* Darker shade of blue for button hover state */
-}
+/* Styling for the container */
 .donate-container {
   padding: 40px;
   background-color: #f5f5f5;
 }
 
-.donate-row {
+/* Styling for rows and alignment */
+.donate-row, .align-items-center {
   margin-bottom: 30px;
 }
 
+/* Styling for the donation info section */
 .donate-info {
   padding: 20px;
   background-color: #fff;
   border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional shadow for depth */
 }
 
-.donate-form {
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  margin-left: 20px; /* Adjust as needed for spacing */
+/* Heading styles */
+.donate h2, .donate h3 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
 }
 
-.donation-amounts button {
+/* Paragraph styles */
+.donate p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Form label styling */
+.form-label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.donate-info {   padding: 20px;   background-color: #fff;   border-radius: 8px;   flex: 1; /* Allows the form to scale right and take up remaining space */   margin-left: 20px; /* Creates space between the form and the previous column */   box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional shadow for depth */ }
+/* Form control styling */
+.form-control, .form-select {
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+/* Styling for the Donate Now button to be blue */
+.btn-success {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.btn-success:hover {
+  background-color: #004a9f;
+  border-color: #004a9f;
+}
+
+/* Align payment methods on the same line */
+.payment-methods {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+/* Styling for selected donation amount and payment method */
+.selected-donation-amount, .selected-payment-method {
+  background-color: #0056b3; /* Blue background for selected state */
+  color: white; /* White text for better readability */
+}
+
+/* Styling for donation amount buttons */
+.donation-amount {
   margin-right: 10px;
   margin-bottom: 10px;
 }
 
-
-/* Add to your existing styles */
-
-.payment-methods button {
+/* Adjust button padding and margins to ensure alignment */
+.payment-method {
   margin-right: 10px;
   margin-bottom: 10px;
-  /* You may want to add styles for the payment method logos */
-}
-
-/* You may need to adjust the button styles to fit your design */
-
-/* Styles for the donation frequency dropdown */
-.form-control[type="select"] {
-  /* Style your select dropdown here */
-}
-
-/* Existing styles... */
-
-/* Add styles for payment method buttons */
-.payment-methods .payment-method {
   border: none;
   background: none;
-  padding: 5px 10px;
 }
 
-.payment-methods .payment-method img {
-  width: 50px; /* Set the width as needed */
+/* Ensure images in payment method buttons fit nicely */
+.payment-method img {
+  width: 50px; /* Adjust as needed */
   height: auto;
-  margin-right: 10px;
 }
 
-/* Style adjustments for the form controls and donation buttons as necessary */
+@media (max-width: 768px) {
+  .donate-info {
+    margin-top: 20px;
+  }
 
-/* Update styles for the buttons, form controls, and text to match the screenshot */
-
-/* Additional styles for responsiveness and aesthetics can be added as needed */
+  .payment-methods {
+    justify-content: center;
+  }
+}

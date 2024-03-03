@@ -9,7 +9,7 @@ function Commitment() {
       <Row>
         <Col md={4}>
           <Card className="commitment-item">
-            <Card.Img variant="top" src="https://3blaws.s3.amazonaws.com/styles/carousel_2x/s3/images/DSC06369.JPG" />
+            <Card.Img variant="top" src="https://s3.amazonaws.com/uww.assets/site/blog/uw-ghana1.png" />
             <Card.Body>
               <Card.Title>Building Digital Literacy</Card.Title>
               <Card.Text>
@@ -24,7 +24,7 @@ function Commitment() {
 
         <Col md={4}>
           <Card className="commitment-item">
-            <Card.Img variant="top" src="https://3blaws.s3.amazonaws.com/styles/carousel_2x/s3/images/DSC06369.JPG" />
+            <Card.Img variant="top" src="https://lh4.googleusercontent.com/-ILLY47SzyRCSCb5-1rmiBi1L2RdlF_4tQQWVBCE-qB-l0jhDIjQZuKHEi2BCWSlyiBIISAxAx6JYJbzbz8Nqw3SMko_a7nGM89YTs62FxzVVQIQXxRRS9cwLUd0oPUR1fwUOR8HGqfvMTtx3Q" />
             <Card.Body>
               <Card.Title>Inspiring Tech for Good</Card.Title>
               <Card.Text>

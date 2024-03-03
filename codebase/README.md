@@ -78,3 +78,17 @@ npm install --save @fortawesome/react-fontawesome
 npm install react-scroll
 npm install react-router-dom
 npm install react-router-dom
+
+
+
+
+
+Donation server:
+npm init -y
+npm install express body-parser dotenv
+server.js is added
+
+
+npm install @paypal/checkout-server-sdk
+PAYPAL_CLIENT_ID=your_client_id
+PAYPAL_CLIENT_SECRET=your_client_secret

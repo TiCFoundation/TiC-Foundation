@@ -14,6 +14,12 @@
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
+/* In your home.css */
+.donate-button {
+  /* Existing styles... */
+  text-decoration: none; /* Remove the underline from the link */
+  display: inline-block; /* Allow padding and width/height to be set */
+}
 
 .background-image.show {
   opacity: 1;

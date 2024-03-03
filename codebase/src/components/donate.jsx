@@ -1,5 +1,4 @@
-// Donate.js
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import './Styles/donate.css';
 import paypalLogo from './img/paypal.png'; // Replace with your actual import paths
@@ -7,39 +6,79 @@ import visaLogo from './img/visa.png';
 import mastercardLogo from './img/mastercard.png';
 import amexLogo from './img/amex.png';
 
-
-
 function Donate() {
   const [donateAnonymously, setDonateAnonymously] = useState(true);
+  const [selectedAmount, setSelectedAmount] = useState(null);
+  const [selectedPaymentMethod, setSelectedPaymentMethod] = useState(null);
+
   const handleDonateAnonymouslyChange = () => {
     setDonateAnonymously(!donateAnonymously);
   };
 
-
-  const handleDonate = () => {
-    // Replace 'YOUR_PAYPAL_EMAIL' with your actual PayPal email
-    const paypalEmail = 'isaackwamenarteh21@gmail.com';
-
-
-    // Fetch the donation amount from the form or set it directly
-    const donationAmount = document.getElementById('formAmount').value || 10;
-
-    // Create the PayPal donation link
-    const paypalLink = `https://paypal.me/nartehi?${paypalEmail}?amount=${donationAmount}`;
-
-    // Open the PayPal donation link in a new tab
-    window.open(paypalLink, '_blank');
-    const allCountriesOptions = () => {
-      // Here you would return an array of all countries. For brevity, we'll show just a few.
-      return [
-        "United States of America (USA)",
-        "United Kingdom (UK)",
-        "Canada",
-        "Australia",
-      ].map((country) => <option key={country} value={country}>{country}</option>);
-      
-    };
+  const selectDonationAmount = (amount) => {
+    setSelectedAmount(amount);
   };
+
+  const selectPaymentMethod = (method) => {
+    setSelectedPaymentMethod(method);
+  };
+
+  const handleDonate = async () => {
+    const donationAmount = selectedAmount;
+    const paymentMethod = selectedPaymentMethod; // e.g., 'paypal'
+  
+    if (!donationAmount || !paymentMethod) {
+      alert('Please select a donation amount and payment method.');
+      return;
+    }
+  
+    if (!donateAnonymously) {
+      const firstName = document.getElementById('formFirstName').value;
+      const lastName = document.getElementById('formLastName').value;
+      const email = document.getElementById('formEmail').value;
+      const phone = document.getElementById('formPhone').value;
+  
+      if (!firstName || !lastName || !email || !phone) {
+        alert('Please fill in all required fields.');
+        return;
+      }
+  
+    }
+  
+    const requestBody = donateAnonymously ? {
+      amount: donationAmount,
+      paymentMethod: paymentMethod,
+    } : {
+      amount: donationAmount,
+      paymentMethod: paymentMethod,
+
+    };
+  
+    try {
+      const response = await fetch('/donate', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody),
+      });
+  
+      const responseData = await response.json();
+  
+      if (response.ok) {
+        alert('Thank you for your donation!');
+        // Optionally reset form or redirect user here
+      } else {
+        alert(`Error: ${responseData.error}`);
+      }
+    } catch (error) {
+      alert('An error occurred. Please try again later.');
+      console.error('Donation error:', error);
+    }
+  };
+  
+  
+
 
   return (
     <Container className="donate-container my-5">
@@ -55,12 +94,16 @@ function Donate() {
           <div className="donation-amount-section">
             <h4>Select Donation Amount</h4>
             <div className="donation-amount-buttons">
-              <Button variant="outline-primary" className="donation-amount">$20</Button>
-              <Button variant="outline-primary" className="donation-amount">$50</Button>
-              <Button variant="outline-primary" className="donation-amount">$99</Button>
-              <Button variant="outline-primary" className="donation-amount">$249</Button>
-              <Button variant="outline-primary" className="donation-amount">$499</Button>
-              <Button variant="outline-primary" className="donation-amount">$999</Button>
+              {[20, 50, 99, 249, 499, 999].map((amount) => (
+                <Button 
+                  key={amount}
+                  variant={selectedAmount === amount ? "primary" : "outline-primary"}
+                  className={`donation-amount ${selectedAmount === amount ? 'selected-donation-amount' : ''}`}
+                  onClick={() => selectDonationAmount(amount)}
+                >
+                  ${amount}
+                </Button>
+              ))}
             </div>
             <Form.Group controlId="formOtherAmount">
               <Form.Label>Other Amount (USD)</Form.Label>
@@ -68,18 +111,16 @@ function Donate() {
             </Form.Group>
             <h4>Payment Method</h4>
             <div className="payment-methods">
-              <Button variant="outline-secondary" className="payment-method">
-                <img src={paypalLogo} alt="PayPal" />
-              </Button>
-              <Button variant="outline-secondary" className="payment-method">
-                <img src={visaLogo} alt="Visa" />
-              </Button>
-              <Button variant="outline-secondary" className="payment-method">
-                <img src={mastercardLogo} alt="MasterCard" />
-              </Button>
-              <Button variant="outline-secondary" className="payment-method">
-                <img src={amexLogo} alt="American Express" />
-              </Button>
+              {[{id: 'paypal', logo: paypalLogo}, {id: 'visa', logo: visaLogo}, {id: 'mastercard', logo: mastercardLogo}, {id: 'amex', logo: amexLogo}].map((method) => (
+                <Button 
+                  key={method.id}
+                  variant={selectedPaymentMethod === method.id ? "secondary" : "outline-secondary"}
+                  className={`payment-method ${selectedPaymentMethod === method.id ? 'selected-payment-method' : ''}`}
+                  onClick={() => selectPaymentMethod(method.id)}
+                >
+                  <img src={method.logo} alt={method.id} />
+                </Button>
+              ))}
             </div>
             <Form.Group controlId="formFrequency">
               <Form.Label>Frequency</Form.Label>
