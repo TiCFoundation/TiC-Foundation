@@ -84,8 +84,8 @@ TiC Foundation is a non-profit website aimed at providing underprivileged young 
 #### Steps:
 1. Checkout dev branch (git checkout develop)
 2. Get the latest of develop branch (git pull)
-3. Checkout branch your_branch (git checkout your_branch here)
-4. Merge dev branch to branch your_branch (git merge develeop)
+3. Checkout branch your_branch (git checkout your_branch)
+4. Merge develop branch to branch your_branch (git merge develop)
 
 
 
