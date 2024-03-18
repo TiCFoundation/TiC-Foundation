@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Navbars from './components/Navbars';
 import Home from './components/home';
 import AboutUs from './components/about_us';
@@ -10,22 +10,24 @@ import Sponsors from './components/sponsors';
 import Testimonials from './components/testimonials';
 import ExecutivePage from './components/executives';
 import Login from './components/login'
-// import './App.css';
+import ProfilePage from './components/profilePage';
+
 function App() {
   return (
-    <div className="App">
-      <Navbars/>
-      <Home />
-      <AboutUs />
-      <Commitment />
-      <ExecutivePage />
-      <Testimonials />
-      <Donate />
-      <Sponsors/>
-      <SignUp />
-      <Footer />
-      <Login/>
-    </div>
+      <div className="App">
+        <Navbars/>
+          <Home/>
+          <AboutUs/>
+          <Commitment/>
+          <ExecutivePage/>
+          <Testimonials/>
+          <Donate/>
+          <Sponsors/>
+          <SignUp/>
+          <Login/>
+          <ProfilePage/>
+          <Footer/>
+      </div>
   );
 }
 
