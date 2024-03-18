@@ -90,5 +90,5 @@ server.js is added
 
 
 npm install @paypal/checkout-server-sdk
-PAYPAL_CLIENT_ID=your_client_id
-PAYPAL_CLIENT_SECRET=your_client_secret
+PAYPAL_CLIENT_ID=AdyjpBFOzr1nbUYLJLSHHjk2DNhNlHdmMnTYl2pKpfKeiJyLrgR2b1YkVQGgqRvi_kGgOHvz9hGY5shm
+PAYPAL_CLIENT_SECRET=EA-U43bosIY0RRzSQn2d4wSPE9SjxhH-YW34YfVNNsLTFvJkm4bpl0XYdBdgH7qFG3DOq6jlBmmVHY5I

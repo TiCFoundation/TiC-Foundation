@@ -11,7 +11,9 @@ const http = require('http').Server(app);
 const mongoose = require('mongoose');
 const User = require('./models/userModels'); 
 
-mongoose.connect('mongodb+srv://isaackwamenarteh21:YQWUD5skkPdOtHb1@cluster0.eolx1p4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+// mongoose.connect('mongodb+srv://isaackwamenarteh21:YQWUD5skkPdOtHb1@cluster0.eolx1p4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+mongoose.connect('mongodb+srv://isaackwamenarteh21:YQWUD5skkPdOtHb1@cluster0.eolx1p4.mongodb.net/')
+
   .then(() => {
     console.log('Connected to MongoDB');
     insert(); // Call insert function after successful connection
@@ -25,7 +27,7 @@ async function insert() {
     await User.create({
       name: "Isaac",
       username: "IsaacNarteh",
-      email: "isaac@gmail.com",
+      email: "Ysaac@gmail.com",
       password: "1234567890"
     });
     console.log('User created successfully');
