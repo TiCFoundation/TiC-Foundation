@@ -1,6 +1,7 @@
 // Create the necessary connection details to connect to mongodb
 require('dotenv').config();
 const express = require('express');
+const donateRoutes = require('./routes/donateRoutes');
 const app = express(); 
 
 const http = require('http').Server(app);
@@ -19,13 +20,16 @@ mongoose.connect(process.env.MONGODB_URI, {
   .catch(error => {
     console.error('Error connecting to MongoDB:', error);
   });
+  app.use(express.json());
 
+  // Routes
+  app.use(donateRoutes);
 async function insert() {
   try {
     await User.create({
       name: "Isaac86877",
       username: "IsaacNarteh",
-      email: "FGSaac@gmail.com",
+      email: "GTGSaac@gmail.com",
       password: "1234567890"
     });
     console.log('User created successfully');
