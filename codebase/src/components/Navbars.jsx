@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Link, Events, animateScroll as scroll } from 'react-scroll';
+import React, { useState } from 'react';
+import { Link as RouterLink, useNavigate, useLocation } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -8,110 +8,57 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from './img/logo.png';
 
 function Navbars() {
-  const [expanded, setExpanded] = useState(false); // State for Navbar expand
+  const [expanded, setExpanded] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  useEffect(() => {
-    Events.scrollEvent.register('begin', function () {
-      console.log('begin', arguments);
-    });
-    Events.scrollEvent.register('end', function () {
-      console.log('end', arguments);
-    });
-
-    return () => {
-      Events.scrollEvent.remove('begin');
-      Events.scrollEvent.remove('end');
-    };
-  }, []);
-
-  const scrollToTop = () => {
-    scroll.scrollToTop();
-    setExpanded(false); // Close navbar after scroll
+  const handleSectionClick = (sectionId) => {
+    if (location.pathname !== '/') {
+      navigate('/', { state: { scrollToSection: sectionId } });
+    } else {
+      // This direct call might not be necessary if your Home component handles the scrolling
+      // based on the passed state. It's primarily useful for in-page navigation when already on the Home page.
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      }
+    }
+    setExpanded(false);
   };
 
   return (
     <Navbar expanded={expanded} className="navbar" expand="lg">
       <Container>
-        <Navbar.Brand className="logo" onClick={scrollToTop}>
+        <Navbar.Brand className="logo" onClick={() => navigate('/')}>
           <img
             src={logo}
             width="140"
             height="120"
             className="d-inline-block align-top"
-            alt="TiC Foundation logo"
+            alt="Company Logo"
           />
         </Navbar.Brand>
-        <Navbar.Toggle 
+        <Navbar.Toggle
           aria-controls="basic-navbar-nav"
-          aria-expanded={expanded}
-          onClick={() => setExpanded(expanded ? false : "expanded")}
-          aria-label="Toggle navigation"
+          onClick={() => setExpanded(expanded ? false : 'expanded')}
         />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-          <Link
-              to="home"
-              spy={true}
-              smooth={true}
-              duration={500}
-              className="nav-link"
-            >
+            <RouterLink to="/" className="nav-link" onClick={() => setExpanded(false)}>
               Home
-            </Link>
-            <Link
-              to="about-us"
-              spy={true}
-              smooth={true}
-              duration={500}
-              className="nav-link"
-            >
-              About Us
-            </Link>
-            <Link
-              to="commitment"
-              spy={true}
-              smooth={true}
-              duration={500}
-              className="nav-link"
-            >
-              Commitments
-            </Link>
-            <Link
-              to="donate"
-              spy={true}
-              smooth={true}
-              duration={500}
-              className="nav-link"
-            >
-              Give Today
-              </Link>
-            <Link
-              to="sponsors"
-              spy={true}
-              smooth={true}
-              duration={500}
-              className="nav-link"
-            >
-              Sponsors
-            </Link>
-            <Link
-              to="signup"
-              spy={true}
-              smooth={true}
-              duration={500}
-              className="nav-link"
-            >
-              Sign Up
-            </Link>
-            <Link
-              to="profile"
-              spy={true}
-              smooth={true}
-              duration={500}
-              className="nav-link"
-            >
-              Profile
-            </Link>
+            </RouterLink>
+            {/* Replace ScrollLink with div and handle clicks manually for smooth scroll */}
+            <div className="nav-link" onClick={() => handleSectionClick('about-us')}>About Us</div>
+            <div className="nav-link" onClick={() => handleSectionClick('commitment')}>Commitments</div>
+            <div className="nav-link" onClick={() => handleSectionClick('donate')}>Give Today</div>
+            <div className="nav-link" onClick={() => handleSectionClick('sponsors')}>Sponsors</div>
+            <div className="nav-link" onClick={() => handleSectionClick('signup')}>Sign Up</div>
+            <RouterLink to="/login" className="nav-link" onClick={() => setExpanded(false)}>
+              Login
+            </RouterLink>
           </Nav>
         </Navbar.Collapse>
       </Container>
