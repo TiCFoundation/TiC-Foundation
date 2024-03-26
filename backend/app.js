@@ -29,7 +29,7 @@ async function insert() {
     await User.create({
       name: "Isaac86877",
       username: "IsaacNarteh",
-      email: "GTGSaac@gmail.com",
+      email: "Saac@gmail.com",
       password: "1234567890"
     });
     console.log('User created successfully');
