@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import './Styles/donate.css';
 import paypalLogo from './img/paypal.png'; // Replace with your actual import paths
@@ -23,6 +23,7 @@ function Donate() {
     setSelectedPaymentMethod(method);
   };
 
+  
   const handleDonate = async () => {
     const donationAmount = selectedAmount;
     const paymentMethod = selectedPaymentMethod; // e.g., 'paypal'
