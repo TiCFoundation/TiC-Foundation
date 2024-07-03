@@ -50,12 +50,28 @@ function Navbars() {
             <RouterLink to="/" className="nav-link" onClick={() => setExpanded(false)}>
               Home
             </RouterLink>
-            {/* Replace ScrollLink with div and handle clicks manually for smooth scroll */}
-            <div className="nav-link" onClick={() => handleSectionClick('about-us')}>About Us</div>
-            <div className="nav-link" onClick={() => handleSectionClick('commitment')}>Commitments</div>
-            <div className="nav-link" onClick={() => handleSectionClick('donate')}>Give Today</div>
-            <div className="nav-link" onClick={() => handleSectionClick('sponsors')}>Sponsors</div>
-            <div className="nav-link" onClick={() => handleSectionClick('signup')}>Sign Up</div>
+            
+            {/* <div className="nav-link" onClick={() => handleSectionClick('about-us')}>About Us</div> */}
+            <RouterLink to="/about-us" className="nav-link" onClick={() => setExpanded(false)}>
+            About Us
+            </RouterLink>
+
+            
+            <RouterLink to="/commitment" className="nav-link" onClick={() => setExpanded(false)}>
+            Commitments
+            </RouterLink>
+            
+            <RouterLink to="/donate" className="nav-link" onClick={() => setExpanded(false)}>
+            Give Today
+            </RouterLink>
+            
+            <RouterLink to="/sponsors" className="nav-link" onClick={() => setExpanded(false)}>
+            Sponsors
+            </RouterLink>
+       
+            <RouterLink to="/signup" className="nav-link" onClick={() => setExpanded(false)}>
+            Sign Up
+            </RouterLink>
             <RouterLink to="/login" className="nav-link" onClick={() => setExpanded(false)}>
               Login
             </RouterLink>

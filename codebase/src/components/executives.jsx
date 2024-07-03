@@ -9,54 +9,85 @@ function ExecutivePage() {
     {
       id: 1,
       name: 'Isaac Narteh',
-      imageSrc: 'https://media.licdn.com/dms/image/D5603AQEFHgJw9hzA2A/profile-displayphoto-shrink_800_800/0/1682486693945?e=1709164800&v=beta&t=DMAfe4NNkAVRvmaHHjHa4ObioUBfA7Rz0Dk-B1dtK4Y',
+      imageSrc: 'https://oldnavyprod.a.bigcontent.io/v1/static/240501_25-M1203_B_DP_Sale_0501',
       role: 'Executive Director',
-      workExperience: 'Software Engineer',
+      workExperience: 'Software Engineer @ Goldman Sachs',
       
     },
     {
       id: 2,
       name: 'Liliane Azabe',
-      imageSrc: 'https://media.licdn.com/dms/image/D5603AQH-iTCgDUIK9Q/profile-displayphoto-shrink_800_800/0/1698969995736?e=1709164800&v=beta&t=vhldHvM5wMldGju5G0aQiIReLA8fTxZXcQApu1dw5Ao',
-      role: 'University 2',
-      workExperience: 'Company C, Company D',
+      imageSrc: 'https://ngict.fmcide.gov.ng/wp-content/uploads/2024/01/Mask-group-6.png',
+      role: 'Assistant Program Director',
+      workExperience: 'Corporate Intern @ Occidental Petroleum',
       //additionalDetails: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
     {
       id: 3,
       name: 'Kyle Drummonds',
-      imageSrc: 'https://media.licdn.com/dms/image/D4E03AQE_TXymVBnrVg/profile-displayphoto-shrink_800_800/0/1668745132971?e=1709164800&v=beta&t=TWPuZ0teVLfcQza6AoMM0YaOb8BWc3-yr0SNfw4WIo4',
+      imageSrc: 'https://oldnavyprod.a.bigcontent.io/v1/static/240501_25-M1203_B_DP_Sale_0501',
       role: 'Program Manager',
-      workExperience: 'Software Engineer at Exxon',
+      workExperience: 'Software Engineer @ Wells Fargo',
       //additionalDetails: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     },
     {
     id: 4,
       name: 'Samiha Sultana',
-      imageSrc: 'https://media.licdn.com/dms/image/D4E03AQHXdDCstZH65w/profile-displayphoto-shrink_800_800/0/1669455239226?e=1710374400&v=beta&t=-N-PrqLnr63D8a-8jZ2j3hPkqCvxMBaNcgM_rnhcPgA',
+      imageSrc: 'https://ngict.fmcide.gov.ng/wp-content/uploads/2024/01/Mask-group-6.png',
       role: 'Social Media Manager',
-      workExperience: 'Former Software Engineer at Bank of America, USA',
+      workExperience: 'Software Engineer @ Bank of America',
       //additionalDetails: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     // Add more executives as needed
     },
     {
       id: 5,
         name: 'Bright Awiakye',
-        imageSrc: 'https://pbs.twimg.com/media/EaE1tqpWkAIaKPf.jpg',
-        role: 'University 3',
-        workExperience: 'Company E, Company F',
+        imageSrc: 'https://oldnavyprod.a.bigcontent.io/v1/static/240501_25-M1203_B_DP_Sale_0501',
+        role: 'Legal Advisor',
+        workExperience: 'Corporal, Ghana Police Service',
         //additionalDetails: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
       // Add more executives as needed
       },
       {
         id: 6,
           name: 'Dimitrios Ntentia',
-          imageSrc: 'https://media.licdn.com/dms/image/D4E03AQHlqkrVCdKpUQ/profile-displayphoto-shrink_400_400/0/1698189889576?e=1712188800&v=beta&t=RpEWEjuh2FqmKTQ-meCmnc_jwMoYMIr4e7kQjTtQLAk',
-          role: 'Isaac friend 3',
-          workExperience: 'Electrical Engineer intern Trane Technologies',
+          imageSrc: 'https://oldnavyprod.a.bigcontent.io/v1/static/240501_25-M1203_B_DP_Sale_0501',
+          role: 'Technical Lead',
+          workExperience: 'PhD @ Purdue  University',
+
         //  additionalDetails: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         // Add more executives as needed
         },
+        {
+          id: 7,
+            name: 'Frank Owusu',
+            imageSrc: 'https://oldnavyprod.a.bigcontent.io/v1/static/240501_25-M1203_B_DP_Sale_0501',
+            role: 'Communication  Director' ,
+            workExperience: 'Automechanic Engineer',
+  
+          //  additionalDetails: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+          // Add more executives as needed
+          },
+          {
+            id: 8,
+              name: 'Prince Agyemang',
+              imageSrc: 'https://oldnavyprod.a.bigcontent.io/v1/static/240501_25-M1203_B_DP_Sale_0501',
+              role: 'Ground Operation Officer',
+              workExperience: 'Self Employed',
+    
+            //  additionalDetails: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            // Add more executives as needed
+            },
+            {
+              id: 9,
+                name: 'John Arthur',
+                imageSrc: 'https://oldnavyprod.a.bigcontent.io/v1/static/240501_25-M1203_B_DP_Sale_0501',
+                role: 'Chief Field Officer',
+                workExperience: 'Teacher',
+      
+              //  additionalDetails: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+              // Add more executives as needed
+              },
 
   ];
 
@@ -70,8 +101,8 @@ function ExecutivePage() {
               <div className="executive-item">
                 <img src={executive.imageSrc} alt={executive.name} />
                 <h3>{executive.name}</h3>
-                <p>Role: {executive.role}</p>
-                <p>Work Experience: {executive.workExperience}</p>
+                <p>{executive.role}</p>
+                <p>{executive.workExperience}</p>
                 <p>{executive.additionalDetails}</p>
               </div>
             </Col>
