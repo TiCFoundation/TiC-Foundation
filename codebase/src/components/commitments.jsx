@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Row, Col } from 'react-bootstrap';
 import './Styles/commitment.css';
-
+import Testimonials from './testimonials';
 function Commitment() {
   return (
     <div className="commitment">
@@ -54,6 +54,7 @@ function Commitment() {
       </Row>
 
       {/* Add more commitment items as needed */}
+      <Testimonials/>
     </div>
   );
 }
