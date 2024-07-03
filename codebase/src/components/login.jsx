@@ -1,4 +1,4 @@
-// Login.js
+// src/components/Login.js
 import React, { useState } from 'react';
 import './Styles/login.css';
 import ProfilePage from './profilePage';
