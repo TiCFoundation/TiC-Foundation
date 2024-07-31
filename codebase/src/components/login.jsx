@@ -1,53 +1,93 @@
-// src/components/Login.js
+// src/components/Login.jsx
 import React, { useState } from 'react';
-import './Styles/login.css';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../firebase'; 
 import ProfilePage from './profilePage';
+import './Styles/login.css';
 
 function Login() {
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [image, setImage] = useState(null);
+  const [loginData, setLoginData] = useState({
+    email: '',
+    password: ''
+  });
+  const [isSignUpSuccess, setIsSignUpSuccess] = useState(false);
+  const [flashMessage, setFlashMessage] = useState(null);
 
-    const handleNameChange = (event) => {
-        setName(event.target.value);
-    };
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setLoginData({ ...loginData, [name]: value });
+  };
 
-    const handleEmailChange = (event) => {
-        setEmail(event.target.value);
-    };
+  const handleLogin = async (e) => {
+    e.preventDefault();
 
-    const handlePasswordChange = (event) => {
-        setPassword(event.target.value);
-    };
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth, loginData.email, loginData.password);
+      setFlashMessage({
+        type: "success",
+        message: "You have successfully logged in!"
+      });
+      setLoginData({
+        email: '',
+        password: ''
+      });
+      setIsSignUpSuccess(true);
+    } catch (error) {
+      setFlashMessage({ type: "error", message: error.message });
+    }
 
-    const handleImageUpload = (event) => {
-        setImage(URL.createObjectURL(event.target.files[0]));
-    };
+    setTimeout(() => {
+      setFlashMessage(null);
+    }, 3000);
+  };
 
-    const handleLogin = () => {
-        // Perform login validation (e.g., check credentials with backend)
-        // If login successful, set isLoggedIn to true
-        setIsLoggedIn(true);
-    };
-
-    return (
-        <div className="login-container">
-            {!isLoggedIn ? (
-                <div className="login-form">
-                    <h1>Login</h1>
-                    <input type="text" placeholder="Name" value={name} onChange={handleNameChange} />
-                    <input type="email" placeholder="Email" value={email} onChange={handleEmailChange} />
-                    <input type="password" placeholder="Password" value={password} onChange={handlePasswordChange} />
-                    <input type="file" onChange={handleImageUpload} />
-                    <button onClick={handleLogin}>Login</button>
-                </div>
-            ) : (
-                <ProfilePage name={name} email={email} image={image} />
-            )}
+  return (
+    <div className="container2">
+      {isSignUpSuccess ? (
+        <ProfilePage 
+          email={loginData.email} 
+        />
+      ) : (
+        <div className="form-container">
+          <h2>Login Here</h2>
+          {flashMessage && (
+            <div className={`flash-message ${flashMessage.type}`}>
+              {flashMessage.message}
+            </div>
+          )}
+          <div className="cover">
+            <form onSubmit={handleLogin}>
+              <div className="email-container">
+                <label htmlFor="email">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Enter your email here"
+                  onChange={handleChange}
+                  value={loginData.email}
+                />
+              </div>
+              <div className="password-container">
+                <label htmlFor="password">Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Enter your password here"
+                  onChange={handleChange}
+                  value={loginData.password}
+                />
+              </div>
+              <div className="submit-container">
+                <button type="submit">Login</button>
+              </div>
+            </form>
+          </div>
         </div>
-    );
+      )}
+    </div>
+  );
 }
 
 export default Login;
