@@ -1,21 +1,21 @@
 package ticfoundation.app_backend;
 
+import io.github.cdimascio.dotenv.Dotenv;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springdoc.core.GroupedOpenApi;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"ticfoundation.app_backend"})
 @MapperScan("ticfoundation.app_backend.mapper")
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class AppBackendApplication {
 	public static void main(String[] args) {
+		Dotenv dotenv = Dotenv.load();
 		SpringApplication.run(AppBackendApplication.class, args);
 	}
 

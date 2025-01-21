@@ -1,18 +1,22 @@
 package ticfoundation.app_backend.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Lob;
 import lombok.Data;
 
 import java.util.Set;
 
 @Data
+
 public class User {
     private Long id;
     private String name;
     private String username;
     private String password;
     private String email;
-    private String role;
+    private Set<Role> roles;
+    @JsonProperty("profilePicture")
     private byte[] profilePicture;
 
     // Manually added getter methods
@@ -32,18 +36,28 @@ public class User {
         return password;
     }
 
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     public String getEmail() {
         return email;
     }
 
-    public String getRole() {
-        return role;
-    }
 
     public byte[] getProfilePicture() {
-        return null;
+        return profilePicture;
     }
 
-    public void setRoles(Set<Role> roleUser) {
+    public void setProfilePicture(byte[] profilePicture) {
+        this.profilePicture = profilePicture;
+    }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
     }
 }

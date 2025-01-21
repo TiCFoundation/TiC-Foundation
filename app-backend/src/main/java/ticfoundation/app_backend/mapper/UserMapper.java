@@ -12,26 +12,26 @@ public interface UserMapper {
             @Result(property = "username", column = "USERNAME"),
             @Result(property = "password", column = "PASSWORD"),
             @Result(property = "email", column = "EMAIL"),
-            @Result(property = "role", column = "ROLE"),
+            @Result(property = "roles", column = "ROLES"),
             @Result(property = "profilePicture", column = "PROFILE_PICTURE")
     })
-    @Select("SELECT * FROM USERS WHERE username = #{username}")
+    @Select("SELECT * FROM APP_USERS WHERE username = #{username}")
     User findByUsername(String username);
 
-    @Insert("INSERT INTO USERS (NAME, USERNAME, PASSWORD, EMAIL, ROLE, PROFILE_PICTURE) " +
-            "VALUES (#{name}, #{username}, #{password}, #{email}, #{role}, #{profilePicture})")
+    @Insert("INSERT INTO APP_USERS (NAME, USERNAME, PASSWORD, EMAIL, ROLES, PROFILE_PICTURE) " +
+            "VALUES (#{name}, #{username}, #{password}, #{email}, #{roles}, #{profilePicture})")
     void saveUser(User user);
 
-    @Update("UPDATE USERS SET " +
+    @Update("UPDATE APP_USERS SET " +
             "NAME = #{name}, " +
             "USERNAME = #{username}," +
             "PASSWORD = #{password}, " +
             "EMAIL = #{email}, " +
-            "ROLE = #{role}, " +
+            "ROLES = #{roles}, " +
             "PROFILE_PICTURE = #{profilePicture} " +
             "WHERE id = #{id}")
     void updateUser(User user);
 
-    @Select("SELECT * FROM USERS")
+    @Select("SELECT * FROM APP_USERS")
     List<User> getUsers();
 }
