@@ -138,7 +138,7 @@ Once you have successfully connected to the db
 - Head to the pom.xml file and right click on it and select **Run as Maven Project**
 - On the right side of the screen in intelliJ, you will see the maven(m) icon, clcik on it and under **LifeCycle**, select both **clean** and **install** at the same time, then hit green arrow icon above LifeCyle to build the project
 - On the top right corner screen of intelliJ, click on the green arrow button besides AppBackenApplication near the debugger icon to start running backend of the application
-Backend starts on port 2300: http://localhost:3900
+Backend starts on port 2300: http://localhost:2300
 
 ### RESTful APIs
 Swagger UI for API testing and documentation:
