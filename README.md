@@ -136,7 +136,7 @@ Please ensure that you have the following installed on your system
 [Link to Access to Connection](https://docs.google.com/document/d/1SdFTmq2IBdtkYGXu3855g47ImT5tHOaHiCb-m-6GFnY/edit?tab=t.0#heading=h.gqhm3r9i76ld)
  
 Once you have successfully connected to the db
-- Go to YOUR IntelliJ and create a .env file and paste the application properties you have recieved your Isaac Narteh
+- Go to YOUR IntelliJ and create a .env file and paste the application properties you have recieved from **Isaac Narteh**
 - Head to the pom.xml file and right click on it and select **Run as Maven Project**
 - On the right side of the screen in intelliJ, you will see the maven(m) icon, clcik on it and under **LifeCycle**, select both **clean** and **install** at the same time, then hit green arrow icon above LifeCyle to build the project
 - On the top right corner screen of intelliJ, click on the green arrow button besides AppBackenApplication near the debugger icon to start running backend of the application
@@ -158,14 +158,7 @@ The project uses the following dependencies:
 - PostgreSQL Driver
 - Springdoc OpenAPI (for Swagger UI)
 
-### Testing the APIs
-
-Test retrieving all resources with GET /api/resource.
-
-Verify database updates after creating, updating, or deleting resources.
-
-
-### Testing the APIs  
+### Testing the APIs 
 
 - **Retrieve Resources:** Test fetching all resources using `GET /api/resource` to ensure data is correctly retrieved.  
 - **Create Resource:** Use `POST /api/resource` to add a new resource and verify its presence in the database.  
