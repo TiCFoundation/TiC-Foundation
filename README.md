@@ -1,4 +1,4 @@
-# Project Title: TiC Foundation
+# Teens in Computing Foundation: TiC Foundation
 
 ## Overview
 
