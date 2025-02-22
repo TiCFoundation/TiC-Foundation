@@ -29,6 +29,7 @@ bridging the digital divide and empowering young learners for a brighter future.
 - [Link to Trello Board](https://trello.com/b/VMiT2MjJ/developer-stories)
 - [Link to UX Design](https://www.figma.com/design/9gph17fnY8hXzMkM8HaMmv/Mock-Wireframe?node-id=307-518&t=yN4AKXKanZldPkib-0)
 - [Link to Requirements](https://www.notion.so/TiC-Foundation-App-Design-159ed3c5b055806bad14cbe87458300a)
+- [Link to UI Design Requirements](https://docs.google.com/document/d/1I8QXxILBj2vAPJvQk-U8IpKHN5mdIxO0o3Swv7Y6wWQ/edit?tab=t.0#heading=h.18m0op46utun)
 
 
 ### Prerequisites
