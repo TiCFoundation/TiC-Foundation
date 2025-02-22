@@ -53,6 +53,13 @@ The TiC Foundation and I welcome your contributions! Follow the steps below to g
 Go to the original repository on GitHub and click on "Pull Requests." Click "New Pull Request" and select your branch. 
 Provide a clear description of your changes and submit the pull request.
 
+#### To See Latest Changes From Develop branch in your branch
+##### Steps:
+  1. Checkout develop branch: **git checkout develop**
+  2. Get the latest of develop branch:**git pull**
+  3. Checkout branch your_branch:**git checkout your_branch**
+  4. Merge develop branch to branch your_branch:**git merge develop**
+
   
 ## Contributing To UI
 
@@ -102,15 +109,6 @@ Provide a clear description of your changes and submit the pull request.
     npm install react-scroll
     npm install react-router-dom
     npm install react-router-dom
-
-    
-### To See Latest Changes From Develop branch in your branch
-#### Steps:
-  1. Checkout develop branch: **git checkout develop**
-  2. Get the latest of develop branch:**git pull**
-  3. Checkout branch your_branch:**git checkout your_branch**
-  4. Merge develop branch to branch your_branch:**git merge develop**
-     
 
 ## Contributing To Backend with Spring Boot(Java)
 
