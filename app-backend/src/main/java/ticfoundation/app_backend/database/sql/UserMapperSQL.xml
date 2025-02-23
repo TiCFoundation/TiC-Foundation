@@ -1,0 +1,14 @@
+<mapper namespace="com.yourapp.mapper.UserMapper">
+    <select id="findByUsername" resultType="com.yourapp.model.User">
+        SELECT * FROM app_users WHERE username = #{username}
+    </select>
+
+    <insert id="insertUser" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO app_users (name, username, password, email, roles, profile_picture)
+        VALUES (#{name}, #{username}, #{password}, #{email}, #{roles, typeHandler=ticfoundation.app_backend.typehandler.RoleSetTypeHandler}, #{profilePicture})
+    </insert>
+
+    <select id="getAllUsers" resultType="ticfoundation.app_backend.domain.User">
+        SELECT * FROM app_users
+    </select>
+</mapper>
