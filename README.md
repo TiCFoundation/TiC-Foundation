@@ -101,8 +101,9 @@ Provide a clear description of your changes and submit the pull request.
     ```bash
     npm run build
 
-9. If you have issues with build, install the following fonts:
+9. If you have issues with build, install any of the following:
     ```bash
+    npm install
     npm install --save @fortawesome/fontawesome-svg-core
     npm install --save @fortawesome/free-solid-svg-icons
     npm install --save @fortawesome/free-brands-svg-icons
