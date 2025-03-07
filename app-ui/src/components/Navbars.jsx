@@ -1,84 +1,150 @@
 import React, { useState } from 'react';
-import { Link as RouterLink, useNavigate, useLocation } from 'react-router-dom';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import './Styles/Navbars.css';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { Navbar, Nav, NavDropdown, Container, Offcanvas, Button, Badge } from 'react-bootstrap';
+import { BiDonateHeart } from 'react-icons/bi';
+import { GoSponsorTiers } from 'react-icons/go';
+import { PiHandshakeDuotone } from 'react-icons/pi';
+import { LuCalendarDays } from 'react-icons/lu';
+import { GiBookmarklet } from 'react-icons/gi';
+import { GoPeople } from "react-icons/go";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './Styles/Navbars.css';
 import logo from './img/logo.png';
 
 function Navbars() {
   const [expanded, setExpanded] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [showSubmenu, setShowSubmenu] = useState(null);
   const navigate = useNavigate();
   const location = useLocation();
 
-  const handleSectionClick = (sectionId) => {
-    if (location.pathname !== '/') {
-      navigate('/', { state: { scrollToSection: sectionId } });
-    } else {
-      // This direct call might not be necessary if your Home component handles the scrolling
-      // based on the passed state. It's primarily useful for in-page navigation when already on the Home page.
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-        });
-      }
-    }
+  const handleSectionClick = (path) => {
+    navigate(path);
     setExpanded(false);
+    setSidebarOpen(false);
+  };
+
+  const menuItems = [
+    {
+      text: 'Who We Are', onClick: () => handleSectionClick('/about-us'), icon: <GoPeople />,
+      submenus: [
+        { text: 'Our Story', onClick: () => handleSectionClick('/about-us') },
+        { text: 'Our Mission', onClick: () => handleSectionClick('/commitment') },
+        { text: 'Our Vision', onClick: () => handleSectionClick('/commitment') },
+        { text: 'Our Team', onClick: () => handleSectionClick('/executives') },
+      ],
+    },
+    {
+      text: 'Our Commitments', onClick: () => handleSectionClick('/commitment'), icon: <PiHandshakeDuotone />,
+      submenus: [
+        { text: 'Digital Literacy', onClick: () => handleSectionClick('/commitment') },
+        { text: 'Tech for Good', onClick: () => handleSectionClick('/commitment') },
+        { text: 'Inclusivity in Tech', onClick: () => handleSectionClick('/commitment') },
+      ],
+    },
+    { text: 'Events', onClick: () => handleSectionClick('/events'), icon: <LuCalendarDays />
+    },
+    {
+      text: 'Our Guidance', onClick: () => handleSectionClick('/commitment'),
+      submenus: [
+        { text: 'Mentorship', onClick: () => handleSectionClick('/commitment') },
+        { text: 'Career Prep', onClick: () => handleSectionClick('/commitment') },
+        { text: 'Volunteerism', onClick: () => handleSectionClick('/volunteer') },
+        { text: 'Testimonials', onClick: () => handleSectionClick('/testimonials') },
+        { text: 'Academic Coaching', onClick: () => handleSectionClick('/commitment') },
+      ],
+    },
+    { text: 'Sponsors', onClick: () => handleSectionClick('/sponsors'), icon: <GoSponsorTiers /> },
+    { text: 'Donate', onClick: () => handleSectionClick('/donate'), icon: <BiDonateHeart /> },
+    {
+      text: 'Start Learning', onClick: () => handleSectionClick('/start-learning'), icon: <GiBookmarklet />,
+      submenus: [
+        { text: 'Primary', onClick: () => handleSectionClick('/submenu-1') },
+        { text: 'Junior High', onClick: () => handleSectionClick('/submenu-2') },
+      ],
+    },
+  ];
+
+  const brand = {
+    appHeader: 'TiC Foundation',
+    envBadge: { name: 'DEV' },
   };
 
   return (
-    <Navbar expanded={expanded} className="navbar" expand="lg">
-      <Container>
-        <Navbar.Brand className="logo" onClick={() => navigate('/')}>
-          <img
-            src={logo}
-            width="140"
-            height="120"
-            className="d-inline-block align-top"
-            alt="Company Logo"
-          />
-        </Navbar.Brand>
-        <Navbar.Toggle
-          aria-controls="basic-navbar-nav"
-          onClick={() => setExpanded(expanded ? false : 'expanded')}
-        />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
-            <RouterLink to="/" className="nav-link" onClick={() => setExpanded(false)}>
-              Home
-            </RouterLink>
-            
-            {/* <div className="nav-link" onClick={() => handleSectionClick('about-us')}>About Us</div> */}
-            <RouterLink to="/about-us" className="nav-link" onClick={() => setExpanded(false)}>
-            About Us
-            </RouterLink>
-
-            
-            <RouterLink to="/commitment" className="nav-link" onClick={() => setExpanded(false)}>
-            Commitments
-            </RouterLink>
-            
-            <RouterLink to="/donate" className="nav-link" onClick={() => setExpanded(false)}>
-            Give Today
-            </RouterLink>
-            
-            <RouterLink to="/sponsors" className="nav-link" onClick={() => setExpanded(false)}>
-            Sponsors
-            </RouterLink>
-       
-            <RouterLink to="/signup" className="nav-link" onClick={() => setExpanded(false)}>
-            Sign Up
-            </RouterLink>
-            <RouterLink to="/login" className="nav-link" onClick={() => setExpanded(false)}>
-              Login
-            </RouterLink>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+      <>
+        <Navbar expanded={expanded} className="navbar" expand="lg">
+          <Container fluid>
+            <Button variant="link" className="hamburger" onClick={() => setSidebarOpen(true)}>
+              ☰
+            </Button>
+            <Navbar.Brand className="logo" onClick={() => navigate('/')}>
+              <img
+                  src={logo}
+                  width="60"
+                  height="60"
+                  className="d-inline-block align-top rounded-circle"
+                  alt="Company Logo"
+              />
+              <div className="brand-info">
+                <h4>{brand.appHeader}</h4>
+                <Badge pill bg="warning" className="env-badge">
+                  {brand.envBadge.name}
+                </Badge>
+              </div>
+            </Navbar.Brand>
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="ms-auto">
+                {menuItems.map((item, index) => (
+                    item.submenus ? (
+                        <NavDropdown
+                            key={index}
+                            title={item.text}
+                            id={`nav-dropdown-${index}`}
+                            show={showSubmenu === item.text}
+                            onMouseEnter={() => setShowSubmenu(item.text)}
+                            onMouseLeave={() => setShowSubmenu(null)}
+                        >
+                          {item.submenus.map((submenu, subIndex) => (
+                              <NavDropdown.Item key={subIndex} onClick={submenu.onClick}>
+                                {submenu.text}
+                              </NavDropdown.Item>
+                          ))}
+                        </NavDropdown>
+                    ) : (
+                        <Nav.Link key={index} onClick={item.onClick}>
+                          {item.icon && item.icon} {item.text}
+                        </Nav.Link>
+                    )
+                ))}
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+        <Offcanvas show={sidebarOpen} onHide={() => setSidebarOpen(false)}>
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title>Menu</Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            <Nav className="flex-column">
+              {menuItems.map((item, index) => (
+                  item.submenus ? (
+                      <NavDropdown key={index} title={item.text} id={`offcanvas-nav-dropdown-${index}`}>
+                        {item.submenus.map((submenu, subIndex) => (
+                            <NavDropdown.Item key={subIndex} onClick={submenu.onClick}>
+                              {submenu.text}
+                            </NavDropdown.Item>
+                        ))}
+                      </NavDropdown>
+                  ) : (
+                      <Nav.Link key={index} onClick={item.onClick}>
+                        {item.icon && item.icon} {item.text}
+                      </Nav.Link>
+                  )
+              ))}
+            </Nav>
+          </Offcanvas.Body>
+        </Offcanvas>
+      </>
   );
 }
 
