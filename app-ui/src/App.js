@@ -14,7 +14,7 @@ import ProfilePage from './components/profilePage';
 import VisionPage from './components/vision';
 import MissionPage from './components/mission';
 import TeamPage from './components/team'
-
+import VolunteerPage from './components/volunteer';
 function App() {
   return (
     <Router>
@@ -33,6 +33,7 @@ function App() {
           <Route path="/sponsors" element={<Sponsors />} />
             <Route path="/vision" element={<VisionPage />} />
             <Route path="/mission" element={<MissionPage />} />
+            <Route path="/volunteer" element={<VolunteerPage />} />
         </Routes>
         <Footer />
       </div>
