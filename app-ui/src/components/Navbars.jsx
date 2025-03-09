@@ -36,11 +36,6 @@ function Navbars() {
     },
     {
       text: 'Our Commitments', onClick: () => handleSectionClick('/commitment'), icon: <PiHandshakeDuotone />,
-      submenus: [
-        { text: 'Digital Literacy', onClick: () => handleSectionClick('/commitment') },
-        { text: 'Tech for Good', onClick: () => handleSectionClick('/commitment') },
-        { text: 'Inclusivity in Tech', onClick: () => handleSectionClick('/commitment') },
-      ],
     },
     { text: 'Events', onClick: () => handleSectionClick('/events'), icon: <LuCalendarDays />
     },
