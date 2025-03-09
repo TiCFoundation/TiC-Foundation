@@ -12,9 +12,9 @@ jobs:
           BRANCH_NAME="${{ github.ref }}" 
           BRANCH_NAME="${BRANCH_NAME#refs/heads/}"
           
-          if [[ "$BRANCH_NAME" =~ ^TIC-[0-9]+(-[a-zA-Z0-9]+)?$ ]]; then
+          if [[ "$BRANCH_NAME" =~ ^TIC-[0-9]+(-[a-zA-Z0-9]+)*$ ]]; then
             echo "✅ Branch name follows the correct pattern."
           else
-            echo "❌ Branch name must follow TIC-issue# or TIC-issue#-feature format (e.g., TIC-123 or TIC-123-feature)."
+            echo "❌ Branch name must follow TIC-issue# or TIC-issue#-description format (e.g., TIC-123 or TIC-123-mentorship-page)."
             exit 1
           fi
