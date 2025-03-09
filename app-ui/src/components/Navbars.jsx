@@ -42,7 +42,7 @@ function Navbars() {
     {
       text: 'Our Guidance', onClick: () => handleSectionClick('/commitment'),
       submenus: [
-        { text: 'Mentorship', onClick: () => handleSectionClick('/commitment') },
+        { text: 'Mentorship', onClick: () => handleSectionClick('/mentorship') },
         { text: 'Career Prep', onClick: () => handleSectionClick('/commitment') },
         { text: 'Volunteerism', onClick: () => handleSectionClick('/volunteer') },
         { text: 'Testimonials', onClick: () => handleSectionClick('/testimonials') },
