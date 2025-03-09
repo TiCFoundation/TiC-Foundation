@@ -47,9 +47,6 @@ function Commitment() {
           </Card>
         </Col>
       </Row>
-
-      {/* Add more commitment items as needed */}
-      <Testimonials/>
     </div>
   );
 }
