@@ -30,7 +30,7 @@ function Navbars() {
       submenus: [
         { text: 'Our Story', onClick: () => handleSectionClick('/about-us') },
         { text: 'Our Mission', onClick: () => handleSectionClick('/commitment') },
-        { text: 'Our Vision', onClick: () => handleSectionClick('/commitment') },
+        { text: 'Our Vision', onClick: () => handleSectionClick('/vision') },
         { text: 'Our Team', onClick: () => handleSectionClick('/executives') },
       ],
     },

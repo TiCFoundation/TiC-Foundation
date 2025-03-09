@@ -56,28 +56,6 @@ function AboutUs() {
           </Row>
         </Container>
       </section>
-      <section className="visuals-section">
-        <Container>
-          <Row>
-            <Col md={6}>
-              <h2 className='ourMission'>Our Mission</h2>
-              <p className='mission'>Our mission is to collaborate and provide essential computer skills to young people from low-income
-                families with resources and programs that will assist them to gain confidence in computing and 
-                support them to break into tech fields in institutions of higher learning.
-                </p>
-              <img src="https://seattlemedium.com/wp-content/uploads/2020/12/distance-learning-748X486.jpg" className="missionImage" alt="mission" />
-            </Col>
-            <Col md={6}>
-              <h2 className='ourVision'>Our Vision</h2>
-              <p className='vision'> Our vision is to equip, motivate and empower underprivileged young people 
-                with computer competencies by collaborating
-                with established educational institutions and organizations in Ghana and worldwide
-                </p>
-              <img src="https://img.freepik.com/free-photo/portrait-black-child-while-doing-homework_641386-254.jpg?size=626&ext=jpg&ga=GA1.1.1412446893.1705104000&semt=ais"className='visionImage' alt="vision" />
-            </Col>
-          </Row>
-        </Container>
-      </section>
       <ExecutivePage/>
     </div>
   );

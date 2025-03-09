@@ -12,6 +12,7 @@ import Testimonials from './components/testimonials';
 import ExecutivePage from './components/executives';
 import Login from './components/login';
 import ProfilePage from './components/profilePage';
+import VisionPage from './components/vision';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/executives" element={<ExecutivePage />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/sponsors" element={<Sponsors />} />
+            <Route path="/vision" element={<VisionPage />} />
         </Routes>
         <Footer />
       </div>
