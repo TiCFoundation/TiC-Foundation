@@ -9,11 +9,11 @@ import SignUp from './components/sign_up';
 import Footer from './components/footer';
 import Sponsors from './components/sponsors';
 import Testimonials from './components/testimonials';
-import ExecutivePage from './components/executives';
 import Login from './components/login';
 import ProfilePage from './components/profilePage';
 import VisionPage from './components/vision';
 import MissionPage from './components/mission';
+import TeamPage from './components/team'
 
 function App() {
   return (
@@ -28,7 +28,7 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
           <Route path="/profile" element={<ProfilePage />} />
-          <Route path="/executives" element={<ExecutivePage />} />
+            <Route path="/team" element={<TeamPage />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/sponsors" element={<Sponsors />} />
             <Route path="/vision" element={<VisionPage />} />

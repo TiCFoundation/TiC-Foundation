@@ -31,7 +31,7 @@ function Navbars() {
         { text: 'Our Story', onClick: () => handleSectionClick('/about-us') },
         { text: 'Our Mission', onClick: () => handleSectionClick('/mission') },
         { text: 'Our Vision', onClick: () => handleSectionClick('/vision') },
-        { text: 'Our Team', onClick: () => handleSectionClick('/executives') },
+        { text: 'Our Team', onClick: () => handleSectionClick('/team') },
       ],
     },
     {

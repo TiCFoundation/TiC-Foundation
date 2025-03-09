@@ -4,7 +4,6 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import './Styles/about_us.css';
 import founderImage from './img/founder.png';
-import ExecutivePage from './executives';
 
 function AboutUs() {
   return (
@@ -56,7 +55,6 @@ function AboutUs() {
           </Row>
         </Container>
       </section>
-      <ExecutivePage/>
     </div>
   );
 }
