@@ -4,7 +4,6 @@
 
 The TiC Foundation is a non-profit online platform dedicated to equipping underprivileged students in rural Ghana with essential computer skills. 
 Built with React, it serves as a hub for educational resources, interactive lessons, and community support, 
-bridging the digital divide and empowering young learners for a brighter future.
 
 ## Features
 
