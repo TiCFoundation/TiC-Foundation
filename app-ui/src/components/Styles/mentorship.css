@@ -1,0 +1,42 @@
+.mentorship-page {
+    font-family: 'Arial, sans-serif';
+}
+
+.hero-section {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    min-height: 100vh;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.program-details-section, .mentor-stories-section, .signup-section {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.program-card, .mentor-card {
+    margin-bottom: 20px;
+}
+
+.signup-form {
+    max-width: 600px;
+    margin: 0 auto;
+}

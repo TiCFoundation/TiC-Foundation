@@ -14,6 +14,7 @@ import ProfilePage from './components/profilePage';
 import VisionPage from './components/vision';
 import MissionPage from './components/mission';
 import TeamPage from './components/team'
+import MentorshipPage from './components/mentorship';
 import VolunteerPage from './components/volunteer';
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
             <Route path="/vision" element={<VisionPage />} />
             <Route path="/mission" element={<MissionPage />} />
             <Route path="/volunteer" element={<VolunteerPage />} />
+            <Route path="/mentorship" element={<MentorshipPage />} />
         </Routes>
         <Footer />
       </div>
