@@ -43,10 +43,11 @@ const Home = () => {
           style={{ backgroundImage: `url(${image})` }}>
           <div className="overlay">
             <div className="text-box">
-              <h1>The TiC Foundation</h1>
-              <h5>Unlocking Tech Dreams For Teens</h5>
+            <h1 style={{ fontSize: '8rem', fontWeight: 'bold'}}>The TiC Foundation</h1>
+            <h5 style={{ fontSize: '3rem', fontWeight: 'bold',paddingTop: '10px'}}>Unlocking Tech Dreams For Teens</h5>
+            <h5 style={{ fontSize: '2rem', fontWeight: 'bold',paddingTop: '20px'}}>We provide technology insights, resources, and guidance
+            <br />to help teens in Ghana thrive in the digital world.</h5>
               <h5 className='date-time'>{formattedDate} , {currentTime}</h5>
-  
               <button onClick={handleDonateClick} className="donate-button">Become a donor</button>
             </div>
           </div>
