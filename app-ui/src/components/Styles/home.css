@@ -36,12 +36,18 @@
 }
 
 .text-box {
+  min-height: 70vh; /* Full height */
   text-align: center;
   color: white;
 }
 
 .date-time {
-  margin: 20px 0;
+  position: absolute; /* Or use 'fixed' if you want it to stay on screen when scrolling */
+  top: 50px; /* Adjust to be just below the navbar (change based on navbar height) */
+  right: 80px; /* Adjust space from the right side */
+  font-size: 1.2rem; /* Adjust size */
+  font-weight: bold;
+  color: #ffffff; /* Adjust color if needed */
 }
 
 .donate-button {
@@ -55,5 +61,5 @@
 }
 
 .donate-button:hover {
-  background-color: #0056b3;
+  background-color: #b30000;
 }

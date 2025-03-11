@@ -36,16 +36,20 @@ function Navbars() {
     },
     {
       text: 'Our Commitments', onClick: () => handleSectionClick('/commitment'), icon: <PiHandshakeDuotone />,
+      submenus: [
+        { text: 'Digital Literacy', onClick: () => handleSectionClick('/Digital Literacy') },
+        { text: 'Tech For Good', onClick: () => handleSectionClick('/Tech For Good') },
+        { text: 'Inclusivity in Tech', onClick: () => handleSectionClick('/Inclusivity in Tech') },
+      ],
     },
     { text: 'Events', onClick: () => handleSectionClick('/events'), icon: <LuCalendarDays />
     },
     {
       text: 'Our Guidance', onClick: () => handleSectionClick('/commitment'),
       submenus: [
+        { text: 'Path to Success', onClick: () => handleSectionClick('/Path to Success') },
         { text: 'Mentorship', onClick: () => handleSectionClick('/mentorship') },
         { text: 'Career Prep', onClick: () => handleSectionClick('/commitment') },
-        { text: 'Volunteerism', onClick: () => handleSectionClick('/volunteer') },
-        { text: 'Testimonials', onClick: () => handleSectionClick('/testimonials') },
         { text: 'Academic Coaching', onClick: () => handleSectionClick('/commitment') },
       ],
     },
