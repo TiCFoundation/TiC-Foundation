@@ -1,0 +1,75 @@
+.career-prep {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+.header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.header p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+}
+
+.resources {
+    margin-bottom: 40px;
+}
+
+.resources h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.resources ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.resources li {
+    margin: 10px 0;
+}
+
+.resources a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.fields {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.field {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+}
+
+.field img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.field h3 {
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+
+.field p {
+    margin-top: 10px;
+    font-size: 1em;
+}
