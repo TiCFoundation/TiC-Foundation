@@ -43,7 +43,7 @@ function Navbars() {
       text: 'Our Guidance', onClick: () => handleSectionClick('/commitment'),
       submenus: [
         { text: 'Mentorship', onClick: () => handleSectionClick('/mentorship') },
-        { text: 'Career Prep', onClick: () => handleSectionClick('/commitment') },
+        { text: 'Career Prep', onClick: () => handleSectionClick('/career-prep') },
         { text: 'Volunteerism', onClick: () => handleSectionClick('/volunteer') },
         { text: 'Testimonials', onClick: () => handleSectionClick('/testimonials') },
         { text: 'Academic Coaching', onClick: () => handleSectionClick('/commitment') },
