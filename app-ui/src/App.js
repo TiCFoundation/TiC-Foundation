@@ -16,6 +16,10 @@ import MissionPage from './components/mission';
 import TeamPage from './components/team'
 import MentorshipPage from './components/mentorship';
 import VolunteerPage from './components/volunteer';
+import CareerPrep from './components/career-prep';
+import AcademicCoachingPage from './components/academic-coaching';
+
+
 function App() {
   return (
     <Router>
@@ -36,6 +40,8 @@ function App() {
             <Route path="/mission" element={<MissionPage />} />
             <Route path="/volunteer" element={<VolunteerPage />} />
             <Route path="/mentorship" element={<MentorshipPage />} />
+            <Route path="/career-prep" element={<CareerPrep />} />
+            <Route path="/academic-coaching" element={<AcademicCoachingPage />} />
         </Routes>
         <Footer />
       </div>
