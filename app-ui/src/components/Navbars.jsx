@@ -46,7 +46,7 @@ function Navbars() {
         { text: 'Career Prep', onClick: () => handleSectionClick('/career-prep') },
         { text: 'Volunteerism', onClick: () => handleSectionClick('/volunteer') },
         { text: 'Testimonials', onClick: () => handleSectionClick('/testimonials') },
-        { text: 'Academic Coaching', onClick: () => handleSectionClick('/commitment') },
+        { text: 'Academic Coaching', onClick: () => handleSectionClick('/academic-coaching') },
       ],
     },
     { text: 'Sponsors', onClick: () => handleSectionClick('/sponsors'), icon: <GoSponsorTiers /> },
